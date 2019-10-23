@@ -1,0 +1,124 @@
+/* Arla colorscheme */
+
+:root {
+    --grass-green: #4BB131;
+    --forest-green: #006C3A;
+    --sun-yellow: #FFCC32;
+    --twilight-blue: #0B43AA;
+    --sky-blue: #3CC4EB;
+    --royal-purple: #7D5DA8;
+    --poppy-red: #F8353C;
+    --dawn-orange: #FF7E05;
+    --tulip-yellow: #FFE90A;
+    --leaf-green: #D7E100;
+    --granite-gray: #363E42;
+    --slate-gray: #7C8180;
+    --stone-gray: #D1D2CE;
+}
+
+/* #region Main colors */
+.grass-green {
+    background-color: var(--grass-green) !important;
+}
+
+.forest-green {
+    background-color: var(--forest-green) !important;
+}
+
+.sun-yellow {
+    background-color: var(--sun-yellow) !important;
+}
+
+.twilight-blue {
+    background-color: var(--twilight-blue) !important;
+}
+
+.sky-blue {
+    background-color: var(--sky-blue) !important;
+}
+
+.royal-purple {
+    background-color: var(--royal-purple) !important;
+}
+
+.poppy-red {
+    background-color: var(--poppy-red) !important;
+}
+
+.dawn-orange {
+    background-color: var(--dawn-orange) !important;
+}
+
+.tulip-yellow {
+    background-color: var(--tulip-yellow) !important;
+}
+
+.leaf-green {
+    background-color: var(--leaf-green) !important;
+}
+
+.granite-gray {
+    background-color: var(--granite-gray) !important;
+}
+
+.slate-gray {
+    background-color: var(--slate-gray) !important;
+}
+
+.stone-gray {
+    background-color: var(--stone-gray) !important;
+}
+
+.grass-green-text {
+    color: var(--grass-green) !important;
+}
+
+.forest-green-text {
+    color: var(--forest-green) !important;
+}
+
+.sun-yellow-text {
+    color: var(--sun-yellow) !important;
+}
+
+.twilight-blue-text {
+    color: var(--twilight-blue) !important;
+}
+
+.sky-blue-text {
+    color: var(--sky-blue) !important;
+}
+
+.royal-purple-text {
+    color: var(--royal-purple) !important;
+}
+
+.poppy-red-text {
+    color: var(--poppy-red) !important;
+}
+
+.dawn-orange-text {
+    color: var(--dawn-orange) !important;
+}
+
+.tulip-yellow-text {
+    color: var(--tulip-yellow) !important;
+}
+
+.leaf-green-text {
+    color: var(--leaf-green) !important;
+}
+
+.granite-gray-text {
+    color: var(--granite-gray) !important;
+}
+
+.slate-gray-text {
+    color: var(--slate-gray) !important;
+}
+
+.stone-gray-text {
+    color: var(--stone-gray) !important;
+}
+
+/* #endregion Main colors */
