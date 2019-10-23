@@ -2,10 +2,10 @@ $(document).ready(function () {
     $('.sidenav').sidenav();
     $('.tabs').tabs();
 
-    tabsInstance = M.Tabs.getInstance($('#tabs-swipe-demo'));
-    // console.log(tabsInstance);
-    
-    
+
+    tabsInstance = M.Tabs.getInstance($('#tabsNav'));
+    tabCount = $('.question-container').length;
+    progressStep = 100 / (tabCount-1);
 });
 
 document.addEventListener('DOMContentLoaded', function () {
