@@ -5,36 +5,108 @@ body {
     height: 100%;
 }
 
+body {
+    display: flex;
+    /* Adjust min-height of body to account for nav and footer */
+    min-height: calc(100vh - 132px);    
+    flex-direction: column;
+    color: var(--granite-gray);
+    /* Padding at the bottom to make sure content is always below the fixed header and above the fixed footer */
+    padding: 56px 0 76px;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+main {
+    flex: 1 0 auto;
+    padding-bottom: 76px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-row {
+    display: flex;
+}
+
+.sidenav-brand-logo {
+    width: 100%;
+    height: auto;
+}
+
+#canvas {
+    width: 75% !important;
+    height: auto !important;
+    margin: auto;
+}
+
 .question-container {
     height: 100%;
     padding: .5rem 1.5rem;
 }
 
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-main {
-    flex: 1 0 auto;
-}
-
-.footer-row{
-    display: flex;
-}
-
-.prev-btn{
+.prev-btn {
     margin: 0 15px 0 auto;
 }
 
-.next-btn{
+.next-btn {
     margin: 0 auto 0 15px;
 }
 
+.ldBar-label {
+    color: var(--white);
+}
+
+.ldBar.label-top>.ldBar-label {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -90%)
+}
+
 /* #region MaterializeCSS overrides */
-.brand-logo{
+.brand-logo {
     height: 64px;
+}
+
+/* label color */
+.input-field label {
+    color: var(--granite-gray);
+}
+
+/* label focus color */
+.input-field input[type=text]:focus+label {
+    color: var(--granite-gray);
+}
+
+/* label underline focus color */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid var(--granite-gray);
+    box-shadow: 0 1px 0 0 var(--granite-gray);
+}
+
+/* valid color */
+.input-field input[type=text].valid {
+    border-bottom: 1px solid var(--forest-green);
+    box-shadow: 0 1px 0 0 var(--forest-green);
+}
+
+/* invalid color */
+.input-field input[type=text].invalid {
+    border-bottom: 1px solid var(--poppy-red);
+    box-shadow: 0 1px 0 0 var(--poppy-red);
+}
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+    color: var(--granite-gray);
 }
 
 /* #endregion MaterializeCSS overrides */

@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     tabsInstance = M.Tabs.getInstance($('#tabsNav'));
     tabCount = $('.question-container').length;
-    progressStep = 100 / (tabCount-1);
+    progressStep = 100 / (tabCount - 1);
 });
 
 document.addEventListener('DOMContentLoaded', function () {

@@ -20,24 +20,23 @@
 
 <body>
 	<header>
-		<nav>
-			<div class="nav-wrapper">
-				<img src="images/Arla_Logo_RGB_Small.png" alt="" class="brand-logo">
-				<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-				<ul class="right hide-on-med-and-down">
-					<li><a href="sass.html">Sass</a></li>
-					<li><a href="badges.html">Components</a></li>
-					<li><a href="collapsible.html">Javascript</a></li>
-					<li><a href="mobile.html">Mobile</a></li>
-				</ul>
-			</div>
+		<nav class="nav-wrapper grass-green">
+			<img src="images/Arla_Logo_RGB_Small.png" alt="" class="brand-logo">
+			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+			<ul class="right hide-on-med-and-down">
+				<!-- <li><a href="sass.html">Sass</a></li>
+				<li><a href="badges.html">Components</a></li>
+				<li><a href="collapsible.html">Javascript</a></li>
+				<li><a href="mobile.html">Mobile</a></li> -->
+			</ul>
 		</nav>
 
 		<ul class="sidenav" id="mobile-demo">
-			<li><a href="sass.html">Sass</a></li>
+			<img src="images/Arla_Logo_RGB_Small.png" alt="" class="sidenav-brand-logo">
+			<!-- <li><a href="sass.html">Sass</a></li>
 			<li><a href="badges.html">Components</a></li>
 			<li><a href="collapsible.html">Javascript</a></li>
-			<li><a href="mobile.html">Mobile</a></li>
+			<li><a href="mobile.html">Mobile</a></li> -->
 		</ul>
 	</header>
 	<main>
@@ -48,42 +47,30 @@
 			<li class="tab col s3"><a href="#tab-2">Test 3</a></li>
 			<li class="tab col s3"><a href="#tab-3">Test 3</a></li>
 		</ul>
-		<div id="tab-0" class="col s12 question-container grass-green active">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti aperiam sequi velit ex porro quidem
-				saepe
-				incidunt, odit necessitatibus quia officiis excepturi nostrum a atque harum natus nemo quibusdam est.
-			</p>
-			<p>Amet magnam cumque commodi rem, officia fugiat a illo placeat dicta ullam et voluptas aliquid ad
-				exercitationem consectetur dolore error sed doloribus veritatis similique obcaecati nam deserunt ipsum.
-				Officia, sapiente.</p>
-			<p>Natus tempora ut esse deserunt id numquam, sed iusto voluptates reiciendis corrupti, blanditiis incidunt,
-				quo
-				unde? Sed, dolorem officiis architecto autem tempore harum nisi non, et, velit distinctio aliquid vel?
-			</p>
-		</div>
-		<div id="tab-1" class="col s12 question-container blue">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta unde praesentium minima assumenda. Debitis
-					corrupti nostrum quam officiis quibusdam excepturi non! Eius dicta, earum sit quos ullam culpa vitae
-					aliquid.</p>
-				<p>Officiis odio nesciunt ipsum sit, assumenda dolorum? Impedit, possimus corporis. Quibusdam ea commodi
-					perspiciatis nam! Minima architecto quas nam quae explicabo, animi illum tempore dolorum ab, quasi error
-					minus voluptatem.</p>
-				<p>Mollitia, tempore quas, distinctio maiores atque minima inventore, et pariatur labore nam excepturi
-					quibusdam! Quis distinctio eligendi ad! Voluptatibus qui enim atque. Blanditiis temporibus, cumque
-					soluta
-					error sit at tenetur?</p>
-				<p>Natus, iusto ipsa! Inventore accusamus excepturi iure beatae. Ipsam magni iusto sint possimus commodi
-					ducimus
-					repellendus rem obcaecati expedita. Iusto saepe dolorem repellendus harum at tenetur? Quis impedit
-					tempora
-					assumenda!</p>
+		<div id="tab-0" class="col s12 question-container active">
+			<div class="row">
+				<div class="col s12">
+					<div class="row">
+						<div class="input-field col s6">
+							<input placeholder="Placeholder" id="first_name" type="text" class="validate">
+							<label for="first_name">First Name</label>
+						</div>
+						<div class="input-field col s6">
+							<input id="last_name" type="text" class="validate">
+							<label for="last_name">Last Name</label>
+						</div>
+					</div>
+				</div>
 			</div>
-		<div id="tab-2" class="col s12 question-container red">
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta unde praesentium minima assumenda. Debitis
+		</div>
+		<div id="tab-1" class="col s12 question-container">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta unde praesentium minima assumenda.
+				Debitis
 				corrupti nostrum quam officiis quibusdam excepturi non! Eius dicta, earum sit quos ullam culpa vitae
 				aliquid.</p>
 			<p>Officiis odio nesciunt ipsum sit, assumenda dolorum? Impedit, possimus corporis. Quibusdam ea commodi
-				perspiciatis nam! Minima architecto quas nam quae explicabo, animi illum tempore dolorum ab, quasi error
+				perspiciatis nam! Minima architecto quas nam quae explicabo, animi illum tempore dolorum ab, quasi
+				error
 				minus voluptatem.</p>
 			<p>Mollitia, tempore quas, distinctio maiores atque minima inventore, et pariatur labore nam excepturi
 				quibusdam! Quis distinctio eligendi ad! Voluptatibus qui enim atque. Blanditiis temporibus, cumque
@@ -95,37 +82,41 @@
 				tempora
 				assumenda!</p>
 		</div>
-		<div id="tab-3" class="col s12 question-container yellow">
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit sit possimus sed dolorum quibusdam
-				alias
-				dolorem libero, iusto ea doloremque? Corporis voluptate corrupti alias ratione autem, adipisci sequi?
-				Reiciendis, iusto.</p>
-			<p>Animi vel eum at aspernatur totam, earum dolorum unde pariatur, accusantium repellat esse quidem. Numquam
-				sed
-				esse ratione repellat eveniet. Neque ratione tempora molestias quam rem nobis numquam vero quod.</p>
-			<p>Voluptates, assumenda. Vel, odit et? Aperiam totam nesciunt tempora eligendi quaerat inventore? Facere
-				officiis ipsam dolorem distinctio. Dignissimos, sequi. Atque iusto odit quam iure laborum alias a facere
-				voluptates delectus.</p>
-			<p>Recusandae eveniet similique non sapiente molestias nostrum impedit, ipsa temporibus suscipit nulla,
-				autem,
-				quia ratione blanditiis at? In animi corrupti corporis, consequatur quis quam itaque soluta quo, odit ea
-				sequi?</p>
-			<p>Sed laudantium ipsa dolorum. Sequi provident error, nisi totam ea facilis dolore magnam vero itaque
-				architecto, fugiat eveniet ad facere cumque quasi rerum deleniti suscipit quidem tempore assumenda
-				consequuntur debitis.</p>
+		<div id="tab-2" class="col s12 question-container">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta unde praesentium minima assumenda.
+				Debitis
+				corrupti nostrum quam officiis quibusdam excepturi non! Eius dicta, earum sit quos ullam culpa vitae
+				aliquid.</p>
+			<p>Officiis odio nesciunt ipsum sit, assumenda dolorum? Impedit, possimus corporis. Quibusdam ea commodi
+				perspiciatis nam! Minima architecto quas nam quae explicabo, animi illum tempore dolorum ab, quasi
+				error
+				minus voluptatem.</p>
+			<p>Mollitia, tempore quas, distinctio maiores atque minima inventore, et pariatur labore nam excepturi
+				quibusdam! Quis distinctio eligendi ad! Voluptatibus qui enim atque. Blanditiis temporibus, cumque
+				soluta
+				error sit at tenetur?</p>
+			<p>Natus, iusto ipsa! Inventore accusamus excepturi iure beatae. Ipsam magni iusto sint possimus commodi
+				ducimus
+				repellendus rem obcaecati expedita. Iusto saepe dolorem repellendus harum at tenetur? Quis impedit
+				tempora
+				assumenda!</p>
+		</div>
+		<div id="tab-3" class="col s12 question-container">
+			<canvas id="canvas"></canvas>
 		</div>
 	</main>
 
-	<footer class="page-footer">
+	<footer class="page-footer forest-green">
 		<div class="container">
 			<div class="row footer-row">
-				<a id="prevTabBtn" class="waves-effect waves-light btn prev-btn disabled" onclick="prevTab();">
+				<a id="prevTabBtn" class="waves-effect waves-light btn prev-btn twilight-blue disabled"
+					onclick="prevTab();">
 					<i class="material-icons left">arrow_back</i>Prev
 				</a>
-				<div id="progressTracker" class="ldBar label-center" data-preset="bubble" data-pattern-size="32"
+				<div id="progressTracker" class="ldBar label-top" data-preset="bubble" data-pattern-size="32"
 					data-fill="https://loading.io/mod/pattern/cloud/index.svg" style="width:36px;height:36px">
 				</div>
-				<a id="nextTabBtn" class="waves-effect waves-light btn next-btn" onclick="nextTab();">
+				<a id="nextTabBtn" class="waves-effect waves-light twilight-blue btn next-btn" onclick="nextTab();">
 					<i class="material-icons right">arrow_forward</i>Next
 				</a>
 			</div>
@@ -139,6 +130,7 @@
 	<script src="js/loading-bar.min.js"></script>
 	<script src="js/variables.js"></script>
 	<script src="js/functions.js"></script>
+	<script src="js/chart-data.js"></script>
 	<script src="js/main.js"></script>
 </body>
 
