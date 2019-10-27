@@ -1,3 +1,30 @@
+//This emulates loading for the prototype
+function initializeLoading() {
+    // repeat with the interval of 0.5 seconds
+    // let timerId = setInterval(() =>
+    //     updateLoadingBar(),
+    //     1000);
+    
+    updateLoadingBar();
+    // after 5 seconds stop
+    setTimeout(() => {
+        // clearInterval(timerId);
+        $('#initialView').slideUp('slow', function () {
+            $('#loginView').removeClass('hide');
+            
+        });
+    }, 5000);
+}
+
+function updateLoadingBar() {
+    // loadingBarProgress += 20;
+    loadingBarProgress = 100;
+    loadingBarEl.set(loadingBarProgress);
+    
+    //Reset loadingBarProgress
+    loadingBarProgress = 0;
+}
+
 function updateProgress(currProgress) {
     progressTrackerEl.set(currProgress);
 }

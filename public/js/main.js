@@ -17,6 +17,8 @@ $(document).ready(function () {
             }
         }
     });
+
+    initializeLoading();
 });
 
 document.addEventListener('DOMContentLoaded', function () {

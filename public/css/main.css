@@ -92,7 +92,7 @@ footer {
     padding: .5rem 1.5rem;
 }
 
-.question-container .row{
+.question-container .row {
     margin: 0;
 }
 
@@ -104,16 +104,24 @@ footer {
     margin: 0 auto 0 15px;
 }
 
-.ldBar-label {
-    color: var(--white);
-}
-
 .ldBar.label-top>.ldBar-label {
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(-50%, -90%)
+    transform: translate(-50%, -90%);
+    color: var(--white);
 }
+
+/* #region Helpers */
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+/* #endregion Helpers */
 
 /* #region MaterializeCSS overrides */
 
