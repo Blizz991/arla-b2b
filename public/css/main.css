@@ -16,7 +16,7 @@ body {
     flex-direction: column;
     color: var(--granite-gray);
     /* Padding at the bottom to make sure content is always below the fixed header and above the fixed footer */
-    padding: 56px 0 76px;
+    padding: 64px 0 76px;
 }
 
 header {

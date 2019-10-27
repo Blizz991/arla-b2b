@@ -49,6 +49,8 @@
 			<li class="tab col s3"><a href="#tab-1">Test 2</a></li>
 			<li class="tab col s3"><a href="#tab-2">Test 3</a></li>
 			<li class="tab col s3"><a href="#tab-3">Test 3</a></li>
+			<li class="tab col s3"><a href="#tab-4">Test 4</a></li>
+			<li class="tab col s3"><a href="#tab-5">Test 5</a></li>
 		</ul>
 		<div class="row">
 			<section id="tab-0" class="col s12 question-container active">
@@ -70,7 +72,7 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="input-field col s12">
+							<div class="input-field col s12 l6">
 								<select>
 									<option value="" disabled selected>Choose region</option>
 									<option value="1">North</option>
@@ -78,6 +80,15 @@
 									<option value="3">Zealand</option>
 								</select>
 								<label>Select Farm Region</label>
+							</div>
+							<div class="input-field col s12 l6">
+								<select disabled>
+									<option value="" disabled selected>Choose farm</option>
+									<option value="1">DK1</option>
+									<option value="2">DK2</option>
+									<option value="3">DK3</option>
+								</select>
+								<label>Select Farm</label>
 							</div>
 						</div>
 					</div>
@@ -140,44 +151,75 @@
 				</div>
 			</section>
 			<section id="tab-1" class="col s12 question-container">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta unde praesentium minima assumenda.
-					Debitis
-					corrupti nostrum quam officiis quibusdam excepturi non! Eius dicta, earum sit quos ullam culpa vitae
-					aliquid.</p>
-				<p>Officiis odio nesciunt ipsum sit, assumenda dolorum? Impedit, possimus corporis. Quibusdam ea commodi
-					perspiciatis nam! Minima architecto quas nam quae explicabo, animi illum tempore dolorum ab, quasi
-					error
-					minus voluptatem.</p>
-				<p>Mollitia, tempore quas, distinctio maiores atque minima inventore, et pariatur labore nam excepturi
-					quibusdam! Quis distinctio eligendi ad! Voluptatibus qui enim atque. Blanditiis temporibus, cumque
-					soluta
-					error sit at tenetur?</p>
-				<p>Natus, iusto ipsa! Inventore accusamus excepturi iure beatae. Ipsam magni iusto sint possimus commodi
-					ducimus
-					repellendus rem obcaecati expedita. Iusto saepe dolorem repellendus harum at tenetur? Quis impedit
-					tempora
-					assumenda!</p>
+				<div class="row">
+					<div class="col s12 m10 l6 push-m1 push-l3">
+						<h2>Herd & Cows</h2>
+						<h4>Herd</h4>
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="herdAmountCows" type="number" step="1" class="validate">
+								<label for="herdAmountCows">Amount of cows</label>
+								<span class="helper-text" data-error="Must be a whole number (eg: 1)">Amount of cows
+									this year</span>
+							</div>
+							<div class="input-field col s12">
+								<input id="herdMilkProduced" type="number" step="0.001" class="validate">
+								<label for="herdMilkProduced">Milk produced</label>
+								<span class="helper-text"
+									data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">kg. milk
+									produced this year</span>
+							</div>
+							<div class="input-field col s12">
+								<input id="herdSelfSufficiency" type="number" step="0.001" min="0.001" max="100"
+									class="validate">
+								<label for="herdSelfSufficiency">Self-sufficiency in feed</label>
+								<span class="helper-text"
+									data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">% of dry
+									matter</span>
+							</div>
+						</div>
+						<h4>Cows</h4>
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="cowsFeedConsumption" type="number" class="validate">
+								<label for="cowsFeedConsumption">Feed consumption</label>
+								<span class="helper-text" data-error="Must be a number">kg. dry matter this year</span>
+							</div>
+						</div>
+					</div>
+				</div>
 			</section>
 			<section id="tab-2" class="col s12 question-container">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta unde praesentium minima assumenda.
-					Debitis
-					corrupti nostrum quam officiis quibusdam excepturi non! Eius dicta, earum sit quos ullam culpa vitae
-					aliquid.</p>
-				<p>Officiis odio nesciunt ipsum sit, assumenda dolorum? Impedit, possimus corporis. Quibusdam ea commodi
-					perspiciatis nam! Minima architecto quas nam quae explicabo, animi illum tempore dolorum ab, quasi
-					error
-					minus voluptatem.</p>
-				<p>Mollitia, tempore quas, distinctio maiores atque minima inventore, et pariatur labore nam excepturi
-					quibusdam! Quis distinctio eligendi ad! Voluptatibus qui enim atque. Blanditiis temporibus, cumque
-					soluta
-					error sit at tenetur?</p>
-				<p>Natus, iusto ipsa! Inventore accusamus excepturi iure beatae. Ipsam magni iusto sint possimus commodi
-					ducimus
-					repellendus rem obcaecati expedita. Iusto saepe dolorem repellendus harum at tenetur? Quis impedit
-					tempora
-					assumenda!</p>
+				<div class="row">
+					<div class="col s12 m10 l6 push-m1 push-l3">
+						<h2>Energy</h2>
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="energyDiesel" type="number" step="0.001" class="validate">
+								<label for="energyDiesel">Diesel used on the farm</label>
+								<span class="helper-text"
+									data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">Litres of
+									diesel used on the farm this year</span>
+							</div>
+							<div class="input-field col s12">
+								<input id="energyElectricity" type="number" step="0.001" class="validate">
+								<label for="energyElectricity">Energy used on the farm</label>
+								<span class="helper-text"
+									data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">kWh. milk
+									produced this year</span>
+							</div>
+						</div>
+					</div>
+				</div>
 			</section>
 			<section id="tab-3" class="col s12 question-container">
+				<h2>Your results</h2>
+			</section>
+			<section id="tab-4" class="col s12 question-container">
+				<h2>Region results</h2>
+			</section>
+			<section id="tab-5" class="col s12 question-container">
+				<h2>Compare data</h2>
 				<canvas id="canvas"></canvas>
 			</section>
 		</div>
@@ -188,13 +230,13 @@
 			<div class="row footer-row">
 				<a id="prevTabBtn" class="waves-effect waves-light btn prev-btn twilight-blue disabled"
 					onclick="prevTab();">
-					<i class="material-icons left">arrow_back</i>Prev
+					<i class="material-icons left">arrow_back</i><span>Prev</span>
 				</a>
 				<div id="progressTracker" class="ldBar label-top" data-preset="bubble" data-pattern-size="32"
 					data-fill="https://loading.io/mod/pattern/cloud/index.svg" style="width:36px;height:36px">
 				</div>
 				<a id="nextTabBtn" class="waves-effect waves-light twilight-blue btn next-btn" onclick="nextTab();">
-					<i class="material-icons right">arrow_forward</i>Next
+					<i class="material-icons right">arrow_forward</i><span>Herd & Cows</span>
 				</a>
 			</div>
 		</div>
