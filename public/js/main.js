@@ -1,11 +1,21 @@
 $(document).ready(function () {
     $('.sidenav').sidenav();
     $('.tabs').tabs();
+    $('select').formSelect();
 
 
     tabsInstance = M.Tabs.getInstance($('#tabsNav'));
     tabCount = $('.question-container').length;
     progressStep = 100 / (tabCount - 1);
+
+    //Automatically continue to next page is enter is press while an input is focused
+    $(this).keypress(function (event) {
+        if (event.keyCode == 13) {
+            if (event.target.nodeName === "INPUT") {
+                nextTab();
+            }
+        }
+    });
 });
 
 document.addEventListener('DOMContentLoaded', function () {

@@ -21,8 +21,11 @@
 <body>
 	<header>
 		<nav class="nav-wrapper grass-green">
-			<img src="images/Arla_Logo_RGB_Small.png" alt="" class="brand-logo">
-			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+			<div class="brand-container">
+				<img src="images/Arla_Logo_RGB_Small.png" alt="">
+				<h1 class="brand-name">Arla B2B</h1>
+			</div>
+			<a href="#" data-target="sideNav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 			<ul class="right hide-on-med-and-down">
 				<!-- <li><a href="sass.html">Sass</a></li>
 				<li><a href="badges.html">Components</a></li>
@@ -30,79 +33,90 @@
 				<li><a href="mobile.html">Mobile</a></li> -->
 			</ul>
 		</nav>
-
-		<ul class="sidenav" id="mobile-demo">
+	</header>
+	<main class="container">
+		<ul class="sidenav" id="sideNav">
 			<img src="images/Arla_Logo_RGB_Small.png" alt="" class="sidenav-brand-logo">
 			<!-- <li><a href="sass.html">Sass</a></li>
-			<li><a href="badges.html">Components</a></li>
-			<li><a href="collapsible.html">Javascript</a></li>
-			<li><a href="mobile.html">Mobile</a></li> -->
+					<li><a href="badges.html">Components</a></li>
+					<li><a href="collapsible.html">Javascript</a></li>
+					<li><a href="mobile.html">Mobile</a></li> -->
 		</ul>
-	</header>
-	<main>
-
+		<!-- The TabsNav element should not be in a final product, I kept it to speed up prototyping -->
 		<ul id="tabsNav" style="display:none;" class="tabs">
 			<li class="tab col s3"><a class="active" href="#tab-0">Test 1</a></li>
 			<li class="tab col s3"><a href="#tab-1">Test 2</a></li>
 			<li class="tab col s3"><a href="#tab-2">Test 3</a></li>
 			<li class="tab col s3"><a href="#tab-3">Test 3</a></li>
 		</ul>
-		<div id="tab-0" class="col s12 question-container active">
-			<div class="row">
-				<div class="col s12">
-					<div class="row">
-						<div class="input-field col s6">
-							<input placeholder="Placeholder" id="first_name" type="text" class="validate">
-							<label for="first_name">First Name</label>
-						</div>
-						<div class="input-field col s6">
-							<input id="last_name" type="text" class="validate">
-							<label for="last_name">Last Name</label>
-						</div>
+		<div class="row">
+			<section id="tab-0" class="col s12 m6 push-m3 question-container active">
+				<h2>Login</h2>
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="email" type="email" class="validate">
+						<label for="email">Email</label>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div id="tab-1" class="col s12 question-container">
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta unde praesentium minima assumenda.
-				Debitis
-				corrupti nostrum quam officiis quibusdam excepturi non! Eius dicta, earum sit quos ullam culpa vitae
-				aliquid.</p>
-			<p>Officiis odio nesciunt ipsum sit, assumenda dolorum? Impedit, possimus corporis. Quibusdam ea commodi
-				perspiciatis nam! Minima architecto quas nam quae explicabo, animi illum tempore dolorum ab, quasi
-				error
-				minus voluptatem.</p>
-			<p>Mollitia, tempore quas, distinctio maiores atque minima inventore, et pariatur labore nam excepturi
-				quibusdam! Quis distinctio eligendi ad! Voluptatibus qui enim atque. Blanditiis temporibus, cumque
-				soluta
-				error sit at tenetur?</p>
-			<p>Natus, iusto ipsa! Inventore accusamus excepturi iure beatae. Ipsam magni iusto sint possimus commodi
-				ducimus
-				repellendus rem obcaecati expedita. Iusto saepe dolorem repellendus harum at tenetur? Quis impedit
-				tempora
-				assumenda!</p>
-		</div>
-		<div id="tab-2" class="col s12 question-container">
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta unde praesentium minima assumenda.
-				Debitis
-				corrupti nostrum quam officiis quibusdam excepturi non! Eius dicta, earum sit quos ullam culpa vitae
-				aliquid.</p>
-			<p>Officiis odio nesciunt ipsum sit, assumenda dolorum? Impedit, possimus corporis. Quibusdam ea commodi
-				perspiciatis nam! Minima architecto quas nam quae explicabo, animi illum tempore dolorum ab, quasi
-				error
-				minus voluptatem.</p>
-			<p>Mollitia, tempore quas, distinctio maiores atque minima inventore, et pariatur labore nam excepturi
-				quibusdam! Quis distinctio eligendi ad! Voluptatibus qui enim atque. Blanditiis temporibus, cumque
-				soluta
-				error sit at tenetur?</p>
-			<p>Natus, iusto ipsa! Inventore accusamus excepturi iure beatae. Ipsam magni iusto sint possimus commodi
-				ducimus
-				repellendus rem obcaecati expedita. Iusto saepe dolorem repellendus harum at tenetur? Quis impedit
-				tempora
-				assumenda!</p>
-		</div>
-		<div id="tab-3" class="col s12 question-container">
-			<canvas id="canvas"></canvas>
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="password" type="password">
+						<label for="password">Password</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<select>
+							<option value="" disabled selected>Choose region</option>
+							<option value="1">North</option>
+							<option value="2">South</option>
+							<option value="3">Zealand</option>
+						</select>
+						<label>Select Farm Region</label>
+					</div>
+				</div>
+			</section>
+			<section id="tab-1" class="col s12 question-container">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta unde praesentium minima assumenda.
+					Debitis
+					corrupti nostrum quam officiis quibusdam excepturi non! Eius dicta, earum sit quos ullam culpa vitae
+					aliquid.</p>
+				<p>Officiis odio nesciunt ipsum sit, assumenda dolorum? Impedit, possimus corporis. Quibusdam ea commodi
+					perspiciatis nam! Minima architecto quas nam quae explicabo, animi illum tempore dolorum ab, quasi
+					error
+					minus voluptatem.</p>
+				<p>Mollitia, tempore quas, distinctio maiores atque minima inventore, et pariatur labore nam excepturi
+					quibusdam! Quis distinctio eligendi ad! Voluptatibus qui enim atque. Blanditiis temporibus, cumque
+					soluta
+					error sit at tenetur?</p>
+				<p>Natus, iusto ipsa! Inventore accusamus excepturi iure beatae. Ipsam magni iusto sint possimus commodi
+					ducimus
+					repellendus rem obcaecati expedita. Iusto saepe dolorem repellendus harum at tenetur? Quis impedit
+					tempora
+					assumenda!</p>
+			</section>
+			<section id="tab-2" class="col s12 question-container">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta unde praesentium minima assumenda.
+					Debitis
+					corrupti nostrum quam officiis quibusdam excepturi non! Eius dicta, earum sit quos ullam culpa vitae
+					aliquid.</p>
+				<p>Officiis odio nesciunt ipsum sit, assumenda dolorum? Impedit, possimus corporis. Quibusdam ea commodi
+					perspiciatis nam! Minima architecto quas nam quae explicabo, animi illum tempore dolorum ab, quasi
+					error
+					minus voluptatem.</p>
+				<p>Mollitia, tempore quas, distinctio maiores atque minima inventore, et pariatur labore nam excepturi
+					quibusdam! Quis distinctio eligendi ad! Voluptatibus qui enim atque. Blanditiis temporibus, cumque
+					soluta
+					error sit at tenetur?</p>
+				<p>Natus, iusto ipsa! Inventore accusamus excepturi iure beatae. Ipsam magni iusto sint possimus commodi
+					ducimus
+					repellendus rem obcaecati expedita. Iusto saepe dolorem repellendus harum at tenetur? Quis impedit
+					tempora
+					assumenda!</p>
+			</section>
+			<section id="tab-3" class="col s12 question-container">
+				<canvas id="canvas"></canvas>
+			</section>
 		</div>
 	</main>
 

@@ -9,9 +9,13 @@ function prevTab() {
 }
 
 function nextTab() {
+    //TODO: Run validation for current tab
+    //If validation success:
     currProgress += progressStep;
     currTabIndex++;
     switchTab()
+
+    //else highlight invalid elements
 }
 
 function updateBtnStates() {
@@ -36,4 +40,12 @@ function switchTab() {
     updateProgress(currProgress);
     tabId = 'tab-' + currTabIndex;
     tabsInstance.select(tabId);
+}
+
+function setInputValidationClass(inputEl, valid = false) { //Defaults to invalid
+    if (valid) {
+        $(inputEl).removeClass('valid').addClass('invalid');
+    } else {
+        $(inputEl).removeClass('invalid').addClass('valid');
+    }
 }
