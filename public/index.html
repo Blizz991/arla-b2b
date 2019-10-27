@@ -45,112 +45,126 @@
 		</ul>
 		<!-- The TabsNav element should not be in a final product, I kept it to speed up prototyping -->
 		<ul id="tabsNav" style="display:none;" class="tabs">
-			<li class="tab col s3"><a class="active" href="#tab-0">Test 1</a></li>
-			<li class="tab col s3"><a href="#tab-1">Test 2</a></li>
-			<li class="tab col s3"><a href="#tab-2">Test 3</a></li>
-			<li class="tab col s3"><a href="#tab-3">Test 3</a></li>
+			<li class="tab col s3"><a class="active" href="#tab-0">Test 0</a></li>
+			<li class="tab col s3"><a href="#tab-1">Test 1</a></li>
+			<li class="tab col s3"><a href="#tab-2">Test 2</a></li>
+			<!-- <li class="tab col s3"><a href="#tab-3">Test 3</a></li>
 			<li class="tab col s3"><a href="#tab-4">Test 4</a></li>
-			<li class="tab col s3"><a href="#tab-5">Test 5</a></li>
+			<li class="tab col s3"><a href="#tab-5">Test 5</a></li> -->
 		</ul>
-		<div class="row">
-			<section id="tab-0" class="col s12 question-container active">
+		<section id="initialView" class="row">
+			<div class="col s12 m10 l6 push-m1 push-l3">
+				<h2>Login</h2>
 				<div class="row">
-					<div class="col s12 m10 l6 push-m1 push-l3">
-						<h2>Login</h2>
-						<div class="row">
-							<div class="input-field col s12">
-								<input id="email" type="email" value="test@user.dk" disabled class="validate valid">
-								<label for="email">Email</label>
-								<span class="helper-text" data-error="Must be a valid email"
-									data-success="Email is valid"></span>
+					<div class="input-field col s12">
+						<input id="email" type="email" value="test@user.dk" disabled class="validate valid">
+						<label for="email">Email</label>
+						<span class="helper-text" data-error="Must be a valid email"
+							data-success="Email is valid"></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="password" value="1234" type="password" disabled>
+						<label for="password">Password</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12 l6">
+						<select>
+							<option value="" disabled selected>Choose region</option>
+							<option value="1">North</option>
+							<option value="2">South</option>
+							<option value="3">Zealand</option>
+						</select>
+						<label>Select Region</label>
+					</div>
+					<div class="input-field col s12 l6">
+						<select disabled>
+							<option value="" disabled selected>Choose farm</option>
+							<option value="1">DK1</option>
+							<option value="2">DK2</option>
+							<option value="3">DK3</option>
+						</select>
+						<label>Select Farm</label>
+					</div>
+				</div>
+			</div>
+			<div class="row hide-on-small-only">
+				<div class="col m8 push-m2">
+					<div class="scene">
+						<div class="cow">
+							<div class="head">
+								<div class="ears">
+									<div class="ear">
+										<div></div>
+									</div>
+									<div class="ear">
+										<div></div>
+									</div>
+								</div>
+								<div class="face">
+									<div class="shadow"></div>
+									<div class="eye"></div>
+									<div class="eye"></div>
+								</div>
+								<div class="nose">
+									<div class="nostril"></div>
+									<div class="nostril"></div>
+								</div>
+							</div>
+							<div class="body">
+								<div class="torso">
+									<div class="spot"></div>
+									<div class="spot"></div>
+								</div>
+								<div class="legs">
+									<div class="leg"></div>
+									<div class="leg"></div>
+									<div class="leg"></div>
+									<div class="leg"></div>
+									<div class="utters">
+									</div>
+								</div>
+							</div>
+							<div class="tail">
 							</div>
 						</div>
-						<div class="row">
-							<div class="input-field col s12">
-								<input id="password" value="1234" type="password" disabled>
-								<label for="password">Password</label>
+						<div class="barn">
+							<div class="roof"></div>
+							<div class="building">
+								<div class="door"></div>
 							</div>
 						</div>
-						<div class="row">
-							<div class="input-field col s12 l6">
-								<select>
-									<option value="" disabled selected>Choose region</option>
-									<option value="1">North</option>
-									<option value="2">South</option>
-									<option value="3">Zealand</option>
-								</select>
-								<label>Select Farm Region</label>
-							</div>
-							<div class="input-field col s12 l6">
-								<select disabled>
-									<option value="" disabled selected>Choose farm</option>
-									<option value="1">DK1</option>
-									<option value="2">DK2</option>
-									<option value="3">DK3</option>
-								</select>
-								<label>Select Farm</label>
+						<div class="ground">
+							<div class="clumps">
+								<div class="clump"></div>
+								<div class="clump"></div>
+								<div class="clump"></div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="row hide-on-small-only">
-					<div class="col m8 push-m2">
-						<div class="scene">
-							<div class="cow">
-								<div class="head">
-									<div class="ears">
-										<div class="ear">
-											<div></div>
-										</div>
-										<div class="ear">
-											<div></div>
-										</div>
-									</div>
-									<div class="face">
-										<div class="shadow"></div>
-										<div class="eye"></div>
-										<div class="eye"></div>
-									</div>
-									<div class="nose">
-										<div class="nostril"></div>
-										<div class="nostril"></div>
-									</div>
-								</div>
-								<div class="body">
-									<div class="torso">
-										<div class="spot"></div>
-										<div class="spot"></div>
-									</div>
-									<div class="legs">
-										<div class="leg"></div>
-										<div class="leg"></div>
-										<div class="leg"></div>
-										<div class="leg"></div>
-										<div class="utters">
-										</div>
-									</div>
-								</div>
-								<div class="tail">
-								</div>
-							</div>
-							<div class="barn">
-								<div class="roof"></div>
-								<div class="building">
-									<div class="door"></div>
-								</div>
-							</div>
-							<div class="ground">
-								<div class="clumps">
-									<div class="clump"></div>
-									<div class="clump"></div>
-									<div class="clump"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section id="tab-1" class="col s12 question-container">
+			</div>
+		</section>
+		<section id="simpleJourneyView" class="row ">
+			<article class="col s12">
+			<h2>Introduction</h2>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis veritatis ratione error enim minus
+				quaerat, commodi mollitia odit quibusdam ea libero sint asperiores dignissimos maiores sit
+				aspernatur, dolorem nulla rerum.
+			</p>
+		</article>
+		</section>
+		<section id="advancedJourneyView" class="row ">
+			<article id="tab-0" class="col s12 question-container active">
+				<h2>Introduction</h2>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis veritatis ratione error enim minus
+					quaerat, commodi mollitia odit quibusdam ea libero sint asperiores dignissimos maiores sit
+					aspernatur, dolorem nulla rerum.</p>
+			</article>
+			<article id="tab-1" class="col s12 question-container">
 				<div class="row">
 					<div class="col s12 m10 l6 push-m1 push-l3">
 						<h2>Herd & Cows</h2>
@@ -188,8 +202,8 @@
 						</div>
 					</div>
 				</div>
-			</section>
-			<section id="tab-2" class="col s12 question-container">
+			</article>
+			<article id="tab-2" class="col s12 question-container">
 				<div class="row">
 					<div class="col s12 m10 l6 push-m1 push-l3">
 						<h2>Energy</h2>
@@ -211,21 +225,23 @@
 						</div>
 					</div>
 				</div>
+			</article>
+		</section>
+		<section id="resultsView" class="row ">
+			<section class="col s12">
+				<h2>Your data</h2>
 			</section>
-			<section id="tab-3" class="col s12 question-container">
-				<h2>Your results</h2>
+			<section class="col s12">
+				<h2>Region data</h2>
 			</section>
-			<section id="tab-4" class="col s12 question-container">
-				<h2>Region results</h2>
-			</section>
-			<section id="tab-5" class="col s12 question-container">
+			<section class="col s12">
 				<h2>Compare data</h2>
 				<canvas id="canvas"></canvas>
 			</section>
-		</div>
+		</section>
 	</main>
 
-	<footer class="page-footer forest-green">
+	<footer id="footerNav" class="page-footer forest-green hide">
 		<div class="container">
 			<div class="row footer-row">
 				<a id="prevTabBtn" class="waves-effect waves-light btn prev-btn twilight-blue disabled"
