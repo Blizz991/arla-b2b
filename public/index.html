@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="css/loading-bar.min.css">
+	<link rel="stylesheet" href="css/cow.css">
 	<link rel="stylesheet" href="css/main.css">
 
 	<script defer src="/__/firebase/7.2.1/firebase-app.js"></script>
@@ -50,29 +51,91 @@
 			<li class="tab col s3"><a href="#tab-3">Test 3</a></li>
 		</ul>
 		<div class="row">
-			<section id="tab-0" class="col s12 m6 push-m3 question-container active">
-				<h2>Login</h2>
+			<section id="tab-0" class="col s12 question-container active">
 				<div class="row">
-					<div class="input-field col s12">
-						<input id="email" type="email" class="validate">
-						<label for="email">Email</label>
+					<div class="col s12 m10 l6 push-m1 push-l3">
+						<h2>Login</h2>
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="email" type="email" value="test@user.dk" disabled class="validate valid">
+								<label for="email">Email</label>
+								<span class="helper-text" data-error="Must be a valid email"
+									data-success="Email is valid"></span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="password" value="1234" type="password" disabled>
+								<label for="password">Password</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<select>
+									<option value="" disabled selected>Choose region</option>
+									<option value="1">North</option>
+									<option value="2">South</option>
+									<option value="3">Zealand</option>
+								</select>
+								<label>Select Farm Region</label>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<input id="password" type="password">
-						<label for="password">Password</label>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<select>
-							<option value="" disabled selected>Choose region</option>
-							<option value="1">North</option>
-							<option value="2">South</option>
-							<option value="3">Zealand</option>
-						</select>
-						<label>Select Farm Region</label>
+				<div class="row hide-on-small-only">
+					<div class="col m8 push-m2">
+						<div class="scene">
+							<div class="cow">
+								<div class="head">
+									<div class="ears">
+										<div class="ear">
+											<div></div>
+										</div>
+										<div class="ear">
+											<div></div>
+										</div>
+									</div>
+									<div class="face">
+										<div class="shadow"></div>
+										<div class="eye"></div>
+										<div class="eye"></div>
+									</div>
+									<div class="nose">
+										<div class="nostril"></div>
+										<div class="nostril"></div>
+									</div>
+								</div>
+								<div class="body">
+									<div class="torso">
+										<div class="spot"></div>
+										<div class="spot"></div>
+									</div>
+									<div class="legs">
+										<div class="leg"></div>
+										<div class="leg"></div>
+										<div class="leg"></div>
+										<div class="leg"></div>
+										<div class="utters">
+										</div>
+									</div>
+								</div>
+								<div class="tail">
+								</div>
+							</div>
+							<div class="barn">
+								<div class="roof"></div>
+								<div class="building">
+									<div class="door"></div>
+								</div>
+							</div>
+							<div class="ground">
+								<div class="clumps">
+									<div class="clump"></div>
+									<div class="clump"></div>
+									<div class="clump"></div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
