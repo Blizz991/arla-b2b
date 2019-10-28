@@ -307,22 +307,37 @@
 			</article>
 		</section>
 		<section id="resultsView" style="display: none;" class="row">
-			<section class="col s12">
-				<h2>Your data</h2>
-			</section>
-			<section class="col s12">
-				<h2>Region data</h2>
-			</section>
-			<section class="col s12">
-				<h2>Compare data</h2>
-				<canvas id="canvas"></canvas>
-			</section>
+			<div class="row m-0">
+				<div class="input-field col s12 m6 l4 offset-m3 offset-l4">
+					<select id="resultYearsSelect" multiple>
+						<option value="" disabled>Choose years to display</option>
+						<option selected value="2019">2019</option>
+						<option selected value="2018">2018</option>
+						<option selected value="2017">2017</option>
+						<option selected value="2016">2016</option>
+						<option selected value="2015">2015</option>
+					</select>
+					<label>Years to display in the graphs</label>
+				</div>
+			</div>
+			<article id="resultsYourData" class="col s12">
+				<h2 class="mt-0">Your data</h2>
+				<div class="chart-container">
+					<canvas id="canvas" class="graphCanvas"></canvas>
+				</div>
+			</article>
+			<article id="resultsRegionData" style="display: none;" class="col s12">
+				<h2 class="mt-0">Region data</h2>
+			</article>
+			<article id="resultsCompareData" style="display: none;" class="col s12">
+				<h2 class="mt-0">Compare data</h2>
+			</article>
 		</section>
 	</main>
 
 	<footer id="footerNav" class="page-footer forest-green ld-bar-hack">
 		<div class="container">
-			<div class="row footer-row d-flex">
+			<div id="footerNavBtns" class="row footer-row d-flex">
 				<a id="prevTabBtn" class="waves-effect waves-light btn prev-btn twilight-blue disabled"
 					onclick="prevTab();">
 					<i class="material-icons left">arrow_back</i><span>Prev</span>
@@ -333,8 +348,8 @@
 				<a id="nextTabBtn" class="waves-effect waves-light twilight-blue btn next-btn" onclick="nextTab();">
 					<i class="material-icons right">arrow_forward</i><span>Herd</span>
 				</a>
-				<a id="advancedSubmitBtn" style="display: none;" class="waves-effect waves-light btn grass-green next-btn"
-					onclick="submitAdvanced();">
+				<a id="advancedSubmitBtn" style="display: none;"
+					class="waves-effect waves-light btn grass-green next-btn" onclick="submitAdvanced();">
 					<i class="material-icons left">send</i><span>Submit</span>
 				</a>
 			</div>

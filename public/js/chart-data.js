@@ -158,7 +158,7 @@ var testConfig = {
             ],
             fill: false,
         }, {
-            label: 'C02 in tons',
+            label: 'CO₂ in tons',
             fill: false,
             backgroundColor: window.chartColors.blue,
             borderColor: window.chartColors.blue,
@@ -172,10 +172,13 @@ var testConfig = {
         }]
     },
     options: {
-        responsive: true,
+		responsive: true,
+		aspectRatio: 2,
+		maintainAspectRatio: false,
         title: {
             display: true,
-            text: 'Cows & stuff'
+			text: 'Cows vs CO₂ produced',
+			fontSize : 18
         },
         tooltips: {
             mode: 'index',

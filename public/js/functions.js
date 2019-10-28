@@ -107,18 +107,18 @@ function updateFarmSelect() {
             });
             break;
         case "south":
-                southFarms.forEach(element => {
-                    farmSelect.append(`<option value="${element}"> 
+            southFarms.forEach(element => {
+                farmSelect.append(`<option value="${element}"> 
                     ${element}
                </option>`);
-                });
+            });
             break;
         case "zealand":
-                zealandFarms.forEach(element => {
-                    farmSelect.append(`<option value="${element}"> 
+            zealandFarms.forEach(element => {
+                farmSelect.append(`<option value="${element}"> 
                     ${element}
                </option>`);
-                });
+            });
             break;
         default:
             console.log("Farm selection broke");
@@ -135,14 +135,26 @@ function updateFarmSelect() {
 }
 
 function showAdvancedView() {
-    $('#loginView').fadeOut("slow", function(){
+    $('#loginView').fadeOut("slow", function () {
         $('#advancedJourneyView').fadeIn("fast");
         $('#footerNav').removeClass('ld-bar-hack');
     });
 }
 
 function showSimpleView() {
-    $('#loginView').fadeOut("slow", function(){
+    $('#loginView').fadeOut("slow", function () {
         $('#simpleJourneyView').fadeIn("fast");
+    });
+}
+
+function submitAdvanced() {
+    $('#advancedJourneyView').fadeOut("slow", function () {
+        $('#resultsView').fadeIn("fast");
+    });
+}
+
+function submitSimple() {
+    $('#simpleJourneyView').fadeOut("slow", function () {
+        $('#resultsView').fadeIn("fast");
     });
 }

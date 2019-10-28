@@ -62,31 +62,22 @@ footer {
     height: 64px;
 }
 
-@media only screen and (max-width: 992px) {
-    .brand-container {
-        margin: 0 auto;
-    }
-
-    .brand-container h1 {
-        font-size: 48px;
-        line-height: 48px;
-    }
-
-    .brand-container img {
-        height: 56px;
-    }
-}
-
 .sidenav-brand-logo {
     width: 100%;
     height: auto;
 }
 
-#canvas {
+/* .graphCanvas {
     width: 75% !important;
     height: auto !important;
     margin: auto;
+} */
+.chart-container {
+    position: relative;
+    height: 40vh;
+    /* width: 80vw */
 }
+
 
 .question-container {
     height: 100%;
@@ -119,7 +110,7 @@ loading-bar does a lot of measuring on the SVG and this isn't possible when the 
 In browsers other than firefox, label alignment goes wrong, but firefox throws the NS_ERROR_FAILURE error.
 In other 
 */
-.ld-bar-hack{
+.ld-bar-hack {
     bottom: -76px;
 }
 
@@ -132,30 +123,38 @@ In other
     transform: translate(-50%, -50%);
 }
 
-.d-flex{
+.d-flex {
     display: flex;
 }
 
-.mx-a{
+.mx-a {
     margin-left: auto;
     margin-right: auto;
 }
 
-.my-a{
+.my-a {
     margin-top: auto;
     margin-bottom: auto;
 }
 
-.ml-a{
+.ml-a {
     margin-left: auto;
 }
 
-.mr-a{
+.mr-a {
     margin-right: auto;
 }
 
-.mt-15{
+.mt-15 {
     margin-top: 15px;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.mt-0 {
+    margin-top: 0;
 }
 
 /* #endregion Helpers */
@@ -195,4 +194,44 @@ In other
     color: var(--granite-gray) !important;
 }
 
+[type="checkbox"]:checked+span:not(.lever)::before {
+    /* border-top: 2px solid transparent;
+    border-left: 2px solid transparent; */
+    border-right: 2px solid var(--forest-green) !important;
+    border-bottom: 2px solid var(--forest-green) !important;
+}
+
+.select-dropdown.dropdown-content li.selected {
+    background-color: rgba(0, 108, 58, 0.8) !important;
+}
+
+.select-dropdown.dropdown-content li.selected label {
+    color: #fff !important;
+}
+
 /* #endregion MaterializeCSS overrides */
+
+/* #region MediaQueries */
+
+@media only screen and (max-width: 992px) {
+    .brand-container {
+        margin: 0 auto;
+    }
+
+    .brand-container h1 {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    .brand-container img {
+        height: 56px;
+    }
+
+    /* .graphCanvas {
+        width: 75% !important;
+        height: auto !important;
+        margin: auto;
+    } */
+}
+
+/* #endregion MediaQueries */
