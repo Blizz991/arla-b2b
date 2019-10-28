@@ -129,21 +129,7 @@ window.chartColors = {
 	};
 
 	// INITIALIZATION
-
 	Samples.utils.srand(Date.now());
-
-	// Google Analytics
-	/* eslint-disable */
-	if (document.location.hostname.match(/^(www\.)?chartjs\.org$/)) {
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-28909194-3', 'auto');
-		ga('send', 'pageview');
-	}
-	/* eslint-enable */
-
 }(this));
 
 
@@ -155,7 +141,7 @@ window.randomScalingFactor2 = function () {
     return Math.round(Samples.utils.rand(100, 1000));
 };
 
-var config = {
+var testConfig = {
     type: 'line',
     data: {
         labels: ['2015', '2016', '2017', '2018', '2019'],
@@ -220,25 +206,5 @@ var config = {
 
 window.onload = function () {
     var ctx = document.getElementById('canvas').getContext('2d');
-    window.myLine = new Chart(ctx, config);
+    window.myLine = new Chart(ctx, testConfig);
 };
-
-// var colorNames = Object.keys(window.chartColors);
-// document.getElementById('addDataset').addEventListener('click', function () {
-//     var colorName = colorNames[config.data.datasets.length % colorNames.length];
-//     var newColor = window.chartColors[colorName];
-//     var newDataset = {
-//         label: 'Dataset ' + config.data.datasets.length,
-//         backgroundColor: newColor,
-//         borderColor: newColor,
-//         data: [],
-//         fill: false
-//     };
-
-//     for (var index = 0; index < config.data.labels.length; ++index) {
-//         newDataset.data.push(randomScalingFactor());
-//     }
-
-//     config.data.datasets.push(newDataset);
-//     window.myLine.update();
-// });

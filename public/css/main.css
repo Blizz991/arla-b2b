@@ -40,6 +40,7 @@ footer {
     bottom: 0;
     width: 100%;
     z-index: 100;
+    transition: 1s;
 }
 
 .footer-row {
@@ -112,6 +113,16 @@ footer {
     color: var(--white);
 }
 
+/* Workaround for a "bug" with the loading bar library
+
+loading-bar does a lot of measuring on the SVG and this isn't possible when the container (and therefore the svg) is hidden.
+In browsers other than firefox, label alignment goes wrong, but firefox throws the NS_ERROR_FAILURE error.
+In other 
+*/
+.ld-bar-hack{
+    bottom: -76px;
+}
+
 /* #region Helpers */
 .centered {
     position: fixed;
@@ -119,6 +130,32 @@ footer {
     left: 50%;
     /* bring your own prefixes */
     transform: translate(-50%, -50%);
+}
+
+.d-flex{
+    display: flex;
+}
+
+.mx-a{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.my-a{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.ml-a{
+    margin-left: auto;
+}
+
+.mr-a{
+    margin-right: auto;
+}
+
+.mt-15{
+    margin-top: 15px;
 }
 
 /* #endregion Helpers */

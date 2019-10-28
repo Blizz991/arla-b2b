@@ -110,7 +110,8 @@
 				</div>
 				<div class="col s12">
 					<h6 class="center-align">Getting everything ready for you.</h6>
-					<div id="loadingBar" data-preset="rainbow" data-duration="5" style="width:50%;height:50%;margin:auto" class="ldBar label-center" data-value="0"></div>
+					<div id="loadingBar" data-preset="rainbow" data-duration="5"
+						style="width:50%;height:50%;margin:auto" class="ldBar label-center" data-value="0"></div>
 				</div>
 			</div>
 		</section>
@@ -133,27 +134,38 @@
 				</div>
 				<div class="row">
 					<div class="input-field col s12 l6">
-						<select>
+						<select id="selectRegion" onchange="updateFarmSelect();">
 							<option value="" disabled selected>Choose region</option>
-							<option value="1">North</option>
-							<option value="2">South</option>
-							<option value="3">Zealand</option>
+							<option value="north">North</option>
+							<option value="south">South</option>
+							<option value="zealand">Zealand</option>
 						</select>
 						<label>Select Region</label>
 					</div>
 					<div class="input-field col s12 l6">
-						<select disabled>
+						<select id="selectFarm" disabled>
 							<option value="" disabled selected>Choose farm</option>
-							<option value="1">DK1</option>
-							<option value="2">DK2</option>
-							<option value="3">DK3</option>
 						</select>
 						<label>Select Farm</label>
 					</div>
 				</div>
+				<div class="row">
+					<div class="col s12 d-flex">
+						<a class="waves-effect waves-light btn mx-a dawn-orange" onclick="showAdvancedView();">
+							This is my first time<i class="material-icons right">arrow_forward</i>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12 d-flex">
+						<a class="waves-effect waves-light btn mx-a poppy-red" onclick="showSimpleView();">
+							I've done this before<i class="material-icons right">arrow_forward</i>
+						</a>
+					</div>
+				</div>
 			</div>
 		</section>
-		<section id="simpleJourneyView" class="row hide">
+		<section id="simpleJourneyView" style="display: none;" class="row">
 			<article class="col s12">
 				<h2>Introduction</h2>
 				<p>
@@ -218,11 +230,17 @@
 						</div>
 					</div>
 				</div>
+				<div class="row d-flex">
+					<a id="simpleSubmitBtn" class="waves-effect waves-light btn grass-green mx-a mt-15"
+						onclick="submitSimple();">
+						<i class="material-icons left">send</i><span>Submit</span>
+					</a>
+				</div>
 			</article>
 		</section>
-		<section id="advancedJourneyView" class="row hide">
+		<section id="advancedJourneyView" style="display: none;" class="row">
 			<article id="tab-0" class="col s12 question-container active">
-				<h2>Introduction</h2>
+				<h2>Intro</h2>
 				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis veritatis ratione error enim minus
 					quaerat, commodi mollitia odit quibusdam ea libero sint asperiores dignissimos maiores sit
 					aspernatur, dolorem nulla rerum.</p>
@@ -230,8 +248,7 @@
 			<article id="tab-1" class="col s12 question-container">
 				<div class="row">
 					<div class="col s12 m10 l6 push-m1 push-l3">
-						<h2>Herd & Cows</h2>
-						<h4>Herd</h4>
+						<h2>Herd</h2>
 						<div class="row">
 							<div class="input-field col s12">
 								<input id="herdAmountCows" type="number" step="1" class="validate">
@@ -255,7 +272,6 @@
 									matter</span>
 							</div>
 						</div>
-						<h4>Cows</h4>
 						<div class="row">
 							<div class="input-field col s12">
 								<input id="cowsFeedConsumption" type="number" class="validate">
@@ -290,7 +306,7 @@
 				</div>
 			</article>
 		</section>
-		<section id="resultsView" class="row hide">
+		<section id="resultsView" style="display: none;" class="row">
 			<section class="col s12">
 				<h2>Your data</h2>
 			</section>
@@ -304,9 +320,9 @@
 		</section>
 	</main>
 
-	<footer id="footerNav" class="page-footer forest-green hide">
+	<footer id="footerNav" class="page-footer forest-green ld-bar-hack">
 		<div class="container">
-			<div class="row footer-row">
+			<div class="row footer-row d-flex">
 				<a id="prevTabBtn" class="waves-effect waves-light btn prev-btn twilight-blue disabled"
 					onclick="prevTab();">
 					<i class="material-icons left">arrow_back</i><span>Prev</span>
@@ -315,7 +331,11 @@
 					data-fill="https://loading.io/mod/pattern/cloud/index.svg" style="width:36px;height:36px">
 				</div>
 				<a id="nextTabBtn" class="waves-effect waves-light twilight-blue btn next-btn" onclick="nextTab();">
-					<i class="material-icons right">arrow_forward</i><span>Herd & Cows</span>
+					<i class="material-icons right">arrow_forward</i><span>Herd</span>
+				</a>
+				<a id="advancedSubmitBtn" style="display: none;" class="waves-effect waves-light btn grass-green next-btn"
+					onclick="submitAdvanced();">
+					<i class="material-icons left">send</i><span>Submit</span>
 				</a>
 			</div>
 		</div>
@@ -327,6 +347,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 	<script src="js/loading-bar.min.js"></script>
 	<script src="js/variables.js"></script>
+	<script src="js/prototypeData.js"></script>
 	<script src="js/functions.js"></script>
 	<script src="js/chart-data.js"></script>
 	<script src="js/main.js"></script>

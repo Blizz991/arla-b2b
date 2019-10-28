@@ -8,12 +8,16 @@ $(document).ready(function () {
     tabCount = $('.question-container').length;
     progressStep = 100 / (tabCount - 1);
 
-    //Automatically continue to next page is enter is press while an input is focused
+    //Automatically continue to next page if enter is press while an input is focused
     $(this).keypress(function (event) {
         if (event.keyCode == 13) {
             if (event.target.nodeName === "INPUT") {
                 // console.log(event.target);
-                nextTab();
+                if (currTabIndex === tabCount - 1) {
+                    submitAdvanced();
+                } else {
+                    nextTab();
+                }
             }
         }
     });
