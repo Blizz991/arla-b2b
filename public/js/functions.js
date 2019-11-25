@@ -12,6 +12,7 @@ function initializeLoading() {
         $('#initialView').slideUp('slow', function () {
             $('#loginView').removeClass('hide');
         });
+    // }, 5000);
     }, 500);
 }
 
@@ -134,6 +135,11 @@ function updateFarmSelect() {
     farmSelect.formSelect();
 }
 
+function updateLoginBtnsState(){
+    $('#advancedLoginBtn').removeAttr('disabled');
+    $('#simpleLoginBtn').removeAttr('disabled');
+}
+
 function showAdvancedView() {
     $('#loginView').fadeOut("slow", function () {
         $('#advancedJourneyView').fadeIn("fast");
@@ -150,11 +156,13 @@ function showSimpleView() {
 function submitAdvanced() {
     $('#advancedJourneyView').fadeOut("slow", function () {
         $('#resultsView').fadeIn("fast");
+        $('#footerNav').addClass('ld-bar-hack');
     });
 }
 
 function submitSimple() {
     $('#simpleJourneyView').fadeOut("slow", function () {
         $('#resultsView').fadeIn("fast");
+        ('#footerNav').addClass('ld-bar-hack');
     });
 }

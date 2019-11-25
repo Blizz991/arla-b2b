@@ -104,11 +104,9 @@ footer {
     color: var(--white);
 }
 
-/* Workaround for a "bug" with the loading bar library
-
-loading-bar does a lot of measuring on the SVG and this isn't possible when the container (and therefore the svg) is hidden.
+/* Workaround for a "bug" with the loading bar library.
+Loading-bar does a lot of measuring on the SVG and this isn't possible when the container (and therefore the svg) is hidden.
 In browsers other than firefox, label alignment goes wrong, but firefox throws the NS_ERROR_FAILURE error.
-In other 
 */
 .ld-bar-hack {
     bottom: -76px;
@@ -119,7 +117,6 @@ In other
     position: fixed;
     top: 50%;
     left: 50%;
-    /* bring your own prefixes */
     transform: translate(-50%, -50%);
 }
 
@@ -205,10 +202,13 @@ In other
     background-color: rgba(0, 108, 58, 0.8) !important;
 }
 
-.select-dropdown.dropdown-content li.selected label {
-    color: #fff !important;
+.dropdown-content li > a, .dropdown-content li > span{
+    color: var(--granite-gray) !important;
 }
 
+.dropdown-content li > a, .dropdown-content li.selected > span {
+    color: var(--white) !important;
+}
 /* #endregion MaterializeCSS overrides */
 
 /* #region MediaQueries */
