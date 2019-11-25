@@ -53,7 +53,7 @@ function updateBtnStates() {
         $('#prevTabBtn span').text(prevTabEl.find('h2').text())
     } else { //User can't go back
         $('#prevTabBtn').addClass('disabled');
-        $('#prevTabBtn span').text('Prev');
+        $('#prevTabBtn span').text('Forrige');
     }
 
     //Prevent user from going to next if at the end

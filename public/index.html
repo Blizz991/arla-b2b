@@ -135,31 +135,31 @@
 				<div class="row">
 					<div class="input-field col s12 l6">
 						<select id="selectRegion" onchange="updateFarmSelect();">
-							<option value="" disabled selected>Choose region</option>
-							<option value="north">North</option>
-							<option value="south">South</option>
-							<option value="zealand">Zealand</option>
+							<option value="" disabled selected>Vælg region</option>
+							<option value="north">Nord</option>
+							<option value="south">Syd</option>
+							<option value="zealand">Sjælland</option>
 						</select>
-						<label>Select Region</label>
+						<label>Vælg Region</label>
 					</div>
 					<div class="input-field col s12 l6">
 						<select id="selectFarm" disabled onchange="updateLoginBtnsState();">
-							<option value="" disabled selected>Choose farm</option>
+							<option value="" disabled selected>Vælg gård</option>
 						</select>
-						<label>Select Farm</label>
+						<label>Vælg Gård</label>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col s12 d-flex">
 						<a id="advancedLoginBtn" class="waves-effect waves-light btn mx-a forest-green" disabled onclick="showAdvancedView();">
-							This is my first time<i class="material-icons right">arrow_forward</i>
+							Jeg vil godt have hjælp<i class="material-icons right">arrow_forward</i>
 						</a>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col s12 d-flex">
 						<a id="simpleLoginBtn" class="waves-effect waves-light btn mx-a dawn-orange" disabled onclick="showSimpleView();">
-							I've done this before<i class="material-icons right">arrow_forward</i>
+							Jeg har gjort det her før<i class="material-icons right">arrow_forward</i>
 						</a>
 					</div>
 				</div>
@@ -167,7 +167,7 @@
 		</section>
 		<section id="simpleJourneyView" style="display: none;" class="row">
 			<article class="col s12">
-				<h2>Introduction</h2>
+				<h2>Introduktion</h2>
 				<p>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis veritatis ratione error enim
 					minus
@@ -176,56 +176,51 @@
 				</p>
 				<div class="row">
 					<div class="col s12">
-						<h3>Herd & Cows</h3>
+						<h3>Flok & Køer</h3>
 						<div class="row">
 							<div class="input-field col s12 l6">
 								<input id="herdAmountCows" type="number" step="1" class="validate">
-								<label for="herdAmountCows">Amount of cows</label>
-								<span class="helper-text" data-error="Must be a whole number (eg: 1)">Amount of cows
-									this year</span>
+								<label for="herdAmountCows">Antal køer</label>
+								<span class="helper-text" data-error="Must be a whole number (eg: 1)">Antal køer, i år</span>
 							</div>
 							<div class="input-field col s12 l6">
 								<input id="herdMilkProduced" type="number" step="0.001" class="validate">
-								<label for="herdMilkProduced">Milk produced</label>
+								<label for="herdMilkProduced">Mælk produceret</label>
 								<span class="helper-text"
-									data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">kg. milk
-									produced this year</span>
+									data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">kg. mælk produceret, i år</span>
 							</div>
 						</div>
 						<div class="row">
 							<div class="input-field col s12 l6">
 								<input id="herdSelfSufficiency" type="number" step="0.001" min="0.001" max="100"
 									class="validate">
-								<label for="herdSelfSufficiency">Self-sufficiency in feed</label>
+								<label for="herdSelfSufficiency">Selvforsyning med foder</label>
 								<span class="helper-text"
-									data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">% of dry
-									matter</span>
+									data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">% af tørt stof</span>
 							</div>
 							<div class="input-field col s12 l6">
 								<input id="cowsFeedConsumption" type="number" class="validate">
-								<label for="cowsFeedConsumption">Feed consumption</label>
-								<span class="helper-text" data-error="Must be a number">kg. dry matter this year</span>
+								<label for="cowsFeedConsumption">Foderforbrug</label>
+								<span class="helper-text" data-error="Must be a number">kg. af tørt stof, i år</span>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col s12">
-						<h3>Energy</h3>
+						<h3>Energi</h3>
 						<div class="row">
 							<div class="input-field col s12 l6">
 								<input id="energyDiesel" type="number" step="0.001" class="validate">
-								<label for="energyDiesel">Diesel used on the farm</label>
+								<label for="energyDiesel">Diesel brugt på gården</label>
 								<span class="helper-text"
-									data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">Litres of
-									diesel used on the farm this year</span>
+									data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">Liter diesel brugt, i år</span>
 							</div>
 							<div class="input-field col s12 l6">
 								<input id="energyElectricity" type="number" step="0.001" class="validate">
-								<label for="energyElectricity">Energy used on the farm</label>
+								<label for="energyElectricity">Energi  brugt på gården</label>
 								<span class="helper-text"
-									data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">kWh. milk
-									produced this year</span>
+									data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">kWh. energi brugt, i år</span>
 							</div>
 						</div>
 					</div>
@@ -233,7 +228,7 @@
 				<div class="row d-flex">
 					<a id="simpleSubmitBtn" class="waves-effect waves-light btn grass-green mx-a mt-15"
 						onclick="submitSimple();">
-						<i class="material-icons left">send</i><span>Submit</span>
+						<i class="material-icons left">send</i><span>Send</span>
 					</a>
 				</div>
 			</article>
@@ -248,35 +243,32 @@
 			<article id="tab-1" class="col s12 question-container">
 				<div class="row">
 					<div class="col s12 m10 l6 push-m1 push-l3">
-						<h2>Herd</h2>
+						<h2>Hyrde</h2>
 						<div class="row">
 							<div class="input-field col s12">
 								<input id="herdAmountCows" type="number" step="1" class="validate">
-								<label for="herdAmountCows">Amount of cows</label>
-								<span class="helper-text" data-error="Must be a whole number (eg: 1)">Amount of cows
-									this year</span>
+								<label for="herdAmountCows">Antal køer</label>
+								<span class="helper-text" data-error="Must be a whole number (eg: 1)">Antal køer, i år</span>
 							</div>
 							<div class="input-field col s12">
 								<input id="herdMilkProduced" type="number" step="0.001" class="validate">
-								<label for="herdMilkProduced">Milk produced</label>
+								<label for="herdMilkProduced">Mælk produceret</label>
 								<span class="helper-text"
-									data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">kg. milk
-									produced this year</span>
+									data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">kg. mælk produceret, i år</span>
 							</div>
 							<div class="input-field col s12">
 								<input id="herdSelfSufficiency" type="number" step="0.001" min="0.001" max="100"
 									class="validate">
-								<label for="herdSelfSufficiency">Self-sufficiency in feed</label>
+								<label for="herdSelfSufficiency">Selvforsyning med foder</label>
 								<span class="helper-text"
-									data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">% of dry
-									matter</span>
+									data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">% af tørt stof</span>
 							</div>
 						</div>
 						<div class="row">
 							<div class="input-field col s12">
 								<input id="cowsFeedConsumption" type="number" class="validate">
-								<label for="cowsFeedConsumption">Feed consumption</label>
-								<span class="helper-text" data-error="Must be a number">kg. dry matter this year</span>
+								<label for="cowsFeedConsumption">Foderforbrug</label>
+								<span class="helper-text" data-error="Must be a number">kg. af tørt stof, i år</span>
 							</div>
 						</div>
 					</div>
@@ -285,21 +277,19 @@
 			<article id="tab-2" class="col s12 question-container">
 				<div class="row">
 					<div class="col s12 m10 l6 push-m1 push-l3">
-						<h2>Energy</h2>
+						<h2>Energi</h2>
 						<div class="row">
 							<div class="input-field col s12">
 								<input id="energyDiesel" type="number" step="0.001" class="validate">
-								<label for="energyDiesel">Diesel used on the farm</label>
+								<label for="energyDiesel">Diesel brugt på gården</label>
 								<span class="helper-text"
-									data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">Litres of
-									diesel used on the farm this year</span>
+									data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">Liter diesel brugt, i år</span>
 							</div>
 							<div class="input-field col s12">
 								<input id="energyElectricity" type="number" step="0.001" class="validate">
-								<label for="energyElectricity">Energy used on the farm</label>
+								<label for="energyElectricity">Energi  brugt på gården</label>
 								<span class="helper-text"
-									data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">kWh. milk
-									produced this year</span>
+									data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">kWh. energi brugt, i år</span>
 							</div>
 						</div>
 					</div>
@@ -310,18 +300,18 @@
 			<div class="row m-0">
 				<div class="input-field col s12 m6 l4 offset-m3 offset-l4">
 					<select id="resultYearsSelect" multiple>
-						<option value="" disabled>Choose years to display</option>
+						<option value="" disabled>Vælg år</option>
 						<option selected value="2019">2019</option>
 						<option selected value="2018">2018</option>
 						<option selected value="2017">2017</option>
 						<option selected value="2016">2016</option>
 						<option selected value="2015">2015</option>
 					</select>
-					<label>Years to display in the graphs</label>
+					<label>År der vises i oversigterne</label>
 				</div>
 			</div>
 			<article id="resultsYourData" class="col s12">
-				<h2 class="mt-0">Your data</h2>
+				<h2 class="mt-0">Din data</h2>
 				<div class="chart-container">
 					<canvas id="canvas" class="graphCanvas"></canvas>
 				</div>
@@ -330,7 +320,7 @@
 				<h2 class="mt-0">Region data</h2>
 			</article>
 			<article id="resultsCompareData" style="display: none;" class="col s12">
-				<h2 class="mt-0">Compare data</h2>
+				<h2 class="mt-0">Sammenlign data</h2>
 			</article>
 		</section>
 	</main>
@@ -340,17 +330,17 @@
 			<div id="footerNavBtns" class="row footer-row d-flex">
 				<a id="prevTabBtn" class="waves-effect waves-light btn prev-btn twilight-blue disabled"
 					onclick="prevTab();">
-					<i class="material-icons left">arrow_back</i><span>Prev</span>
+					<i class="material-icons left">arrow_back</i><span>Forrige</span>
 				</a>
 				<div id="progressTracker" class="ldBar label-top" data-preset="bubble" data-pattern-size="32"
 					data-fill="https://loading.io/mod/pattern/cloud/index.svg" style="width:36px;height:36px">
 				</div>
 				<a id="nextTabBtn" class="waves-effect waves-light twilight-blue btn next-btn" onclick="nextTab();">
-					<i class="material-icons right">arrow_forward</i><span>Herd</span>
+					<i class="material-icons right">arrow_forward</i><span>Hyrde</span>
 				</a>
 				<a id="advancedSubmitBtn" style="display: none;"
 					class="waves-effect waves-light btn grass-green next-btn" onclick="submitAdvanced();">
-					<i class="material-icons left">send</i><span>Submit</span>
+					<i class="material-icons left">send</i><span>Send</span>
 				</a>
 			</div>
 		</div>

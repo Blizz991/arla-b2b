@@ -146,7 +146,7 @@ var testConfig = {
     data: {
         labels: ['2015', '2016', '2017', '2018', '2019'],
         datasets: [{
-            label: 'Cows',
+            label: 'Køer',
             backgroundColor: window.chartColors.red,
             borderColor: window.chartColors.red,
             data: [
@@ -158,7 +158,7 @@ var testConfig = {
             ],
             fill: false,
         }, {
-            label: 'CO₂ in tons',
+            label: 'CO₂ i ton',
             fill: false,
             backgroundColor: window.chartColors.blue,
             borderColor: window.chartColors.blue,
@@ -177,7 +177,7 @@ var testConfig = {
 		maintainAspectRatio: false,
         title: {
             display: true,
-			text: 'Cows vs CO₂ produced',
+			text: 'Køer vs CO₂ produceret',
 			fontSize : 18
         },
         tooltips: {
@@ -193,14 +193,14 @@ var testConfig = {
                 display: true,
                 scaleLabel: {
                     display: true,
-                    labelString: 'Year'
+                    labelString: 'År'
                 }
             }],
             yAxes: [{
                 display: true,
                 scaleLabel: {
                     display: true,
-                    labelString: 'Value'
+                    labelString: 'Værdi'
                 }
             }]
         }

@@ -206,7 +206,8 @@ In browsers other than firefox, label alignment goes wrong, but firefox throws t
     color: var(--granite-gray) !important;
 }
 
-.dropdown-content li > a, .dropdown-content li.selected > span {
+.dropdown-content li > a, .dropdown-content li.selected > span,
+.select-dropdown.dropdown-content > li.selected > span > label > span {
     color: var(--white) !important;
 }
 /* #endregion MaterializeCSS overrides */
