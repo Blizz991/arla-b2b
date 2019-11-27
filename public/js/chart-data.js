@@ -10,7 +10,7 @@ window.chartColors = {
 	grey: 'rgb(201, 203, 207)'
 };
 
-(function(global) {
+(function (global) {
 	var MONTHS = [
 		'January',
 		'February',
@@ -43,11 +43,11 @@ window.chartColors = {
 
 	Samples.utils = {
 		// Adapted from http://indiegamr.com/generate-repeatable-random-numbers-in-js/
-		srand: function(seed) {
+		srand: function (seed) {
 			this._seed = seed;
 		},
 
-		rand: function(min, max) {
+		rand: function (min, max) {
 			var seed = this._seed;
 			min = min === undefined ? 0 : min;
 			max = max === undefined ? 1 : max;
@@ -55,7 +55,7 @@ window.chartColors = {
 			return min + (this._seed / 233280) * (max - min);
 		},
 
-		numbers: function(config) {
+		numbers: function (config) {
 			var cfg = config || {};
 			var min = cfg.min || 0;
 			var max = cfg.max || 1;
@@ -79,7 +79,7 @@ window.chartColors = {
 			return data;
 		},
 
-		labels: function(config) {
+		labels: function (config) {
 			var cfg = config || {};
 			var min = cfg.min || 0;
 			var max = cfg.max || 100;
@@ -98,7 +98,7 @@ window.chartColors = {
 			return values;
 		},
 
-		months: function(config) {
+		months: function (config) {
 			var cfg = config || {};
 			var count = cfg.count || 12;
 			var section = cfg.section;
@@ -113,19 +113,27 @@ window.chartColors = {
 			return values;
 		},
 
-		color: function(index) {
+		color: function (index) {
 			return COLORS[index % COLORS.length];
 		},
 
-		transparentize: function(color, opacity) {
+		transparentize: function (color, opacity) {
 			var alpha = opacity === undefined ? 0.5 : 1 - opacity;
 			return Color(color).alpha(alpha).rgbString();
 		}
 	};
 
 	// DEPRECATED
-	window.randomScalingFactor = function() {
-		return Math.round(Samples.utils.rand(-100, 100));
+	window.randomScalingFactor = function () {
+		return Math.round(Samples.utils.rand(10, 100));
+	};
+
+	window.randomScalingFactor1 = function () {
+		return Math.round(Samples.utils.rand(0, 500));
+	};
+	
+	window.randomScalingFactor2 = function () {
+		return Math.round(Samples.utils.rand(100, 1000));
 	};
 
 	// INITIALIZATION
@@ -133,81 +141,139 @@ window.chartColors = {
 }(this));
 
 
-window.randomScalingFactor1 = function () {
-    return Math.round(Samples.utils.rand(0, 500));
-};
+var co2 = [
+	randomScalingFactor2(),
+	randomScalingFactor2(),
+	randomScalingFactor2(),
+	randomScalingFactor2(),
+	randomScalingFactor2()
+];
 
-window.randomScalingFactor2 = function () {
-    return Math.round(Samples.utils.rand(100, 1000));
-};
-
-var testConfig = {
-    type: 'line',
-    data: {
-        labels: ['2015', '2016', '2017', '2018', '2019'],
-        datasets: [{
-            label: 'Køer',
-            backgroundColor: window.chartColors.red,
-            borderColor: window.chartColors.red,
-            data: [
-                randomScalingFactor1(),
-                randomScalingFactor1(),
-                randomScalingFactor1(),
-                randomScalingFactor1(),
-                randomScalingFactor(1)
-            ],
-            fill: false,
-        }, {
-            label: 'CO₂ i ton',
-            fill: false,
-            backgroundColor: window.chartColors.blue,
-            borderColor: window.chartColors.blue,
-            data: [
-                randomScalingFactor2(),
-                randomScalingFactor2(),
-                randomScalingFactor2(),
-                randomScalingFactor2(),
-                randomScalingFactor2()
-            ],
-        }]
-    },
-    options: {
+var cowsVsCo2 = {
+	type: 'line',
+	data: {
+		labels: ['2015', '2016', '2017', '2018', '2019'],
+		datasets: [{
+			label: 'Køer',
+			backgroundColor: window.chartColors.red,
+			borderColor: window.chartColors.red,
+			data: [
+				randomScalingFactor1(),
+				randomScalingFactor1(),
+				randomScalingFactor1(),
+				randomScalingFactor1(),
+				randomScalingFactor(1)
+			],
+			fill: false,
+		}, {
+			label: 'CO₂ i ton',
+			fill: false,
+			backgroundColor: window.chartColors.blue,
+			borderColor: window.chartColors.blue,
+			data: [
+				randomScalingFactor2(),
+				randomScalingFactor2(),
+				randomScalingFactor2(),
+				randomScalingFactor2(),
+				randomScalingFactor2()
+			],
+		}]
+	},
+	options: {
 		responsive: true,
 		aspectRatio: 2,
 		maintainAspectRatio: false,
-        title: {
-            display: true,
+		title: {
+			display: true,
 			text: 'Køer vs CO₂ produceret',
-			fontSize : 18
-        },
-        tooltips: {
-            mode: 'index',
-            intersect: false,
-        },
-        hover: {
-            mode: 'nearest',
-            intersect: true
-        },
-        scales: {
-            xAxes: [{
-                display: true,
-                scaleLabel: {
-                    display: true,
-                    labelString: 'År'
-                }
-            }],
-            yAxes: [{
-                display: true,
-                scaleLabel: {
-                    display: true,
-                    labelString: 'Værdi'
-                }
-            }]
-        }
-    }
+			fontSize: 18
+		},
+		tooltips: {
+			mode: 'index',
+			intersect: false,
+		},
+		hover: {
+			mode: 'nearest',
+			intersect: true
+		},
+		scales: {
+			xAxes: [{
+				display: true,
+				scaleLabel: {
+					display: true,
+					labelString: 'År'
+				}
+			}],
+			yAxes: [{
+				display: true,
+				scaleLabel: {
+					display: true,
+					labelString: 'Værdi'
+				}
+			}]
+		}
+	}
+};
+
+var co2VsKgMilk = {
+	type: 'line',
+	data: {
+		labels: ['2015', '2016', '2017', '2018', '2019'],
+		datasets: [{
+			label: 'Kg mælk',
+			backgroundColor: window.chartColors.orange,
+			borderColor: window.chartColors.orange,
+			data: [
+				randomScalingFactor1(),
+				randomScalingFactor1(),
+				randomScalingFactor1(),
+				randomScalingFactor1(),
+				randomScalingFactor(1)
+			],
+			fill: false,
+		}
+		]
+	},
+	options: {
+		responsive: true,
+		aspectRatio: 2,
+		maintainAspectRatio: false,
+		title: {
+			display: true,
+			text: 'kg. CO₂ per kg. mælk',
+			fontSize: 18
+		},
+		tooltips: {
+			mode: 'index',
+			intersect: false,
+		},
+		hover: {
+			mode: 'nearest',
+			intersect: true
+		},
+		scales: {
+			xAxes: [{
+				display: true,
+				scaleLabel: {
+					display: true,
+					labelString: 'År'
+				}
+			}],
+			yAxes: [{
+				display: true,
+				scaleLabel: {
+					display: true,
+					labelString: 'Værdi'
+				}
+			}]
+		}
+	}
 };
 
 window.onload = function () {
-    var ctx = document.getElementById('canvas').getContext('2d');
-    window.myLine = new Chart(ctx, testConfig);
+	var cowsVsCo2Id = document.getElementById('cows-vs-co').getContext('2d');
+	var co2VsKgMilkId = document.getElementById('co-vs-kg-milk').getContext('2d');
+	
+	window.myLine = new Chart(cowsVsCo2Id, cowsVsCo2);
+	window.myLine = new Chart(co2VsKgMilkId, co2VsKgMilk);
 };

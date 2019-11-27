@@ -161,6 +161,7 @@ In browsers other than firefox, label alignment goes wrong, but firefox throws t
 /* label color */
 .input-field label {
     color: var(--granite-gray) !important;
+    pointer-events: none;
 }
 
 /* label focus color */
