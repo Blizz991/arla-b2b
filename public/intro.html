@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arla B2B</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/loading-bar.min.css">
+    <link rel="stylesheet" href="css/cow.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script defer src="/__/firebase/7.2.1/firebase-app.js"></script>
+    <!-- <script defer src="/__/firebase/7.2.1/firebase-auth.js"></script> -->
+    <script defer src="/__/firebase/7.2.1/firebase-database.js"></script>
+    <!-- <script defer src="/__/firebase/7.2.1/firebase-messaging.js"></script> -->
+    <!-- <script defer src="/__/firebase/7.2.1/firebase-storage.js"></script> -->
+    <script defer src="/__/firebase/init.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-wrapper grass-green">
+            <div class="brand-container">
+                <img src="images/Arla_Logo_RGB_Small.png" alt="">
+                <h1 class="brand-name">Arla B2B</h1>
+            </div>
+            <a href="#" data-target="sideNav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <!-- <li><a href="sass.html">Sass</a></li>
+				<li><a href="badges.html">Components</a></li>
+				<li><a href="collapsible.html">Javascript</a></li>
+				<li><a href="mobile.html">Mobile</a></li> -->
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <ul class="sidenav" id="sideNav">
+            <img src="images/Arla_Logo_RGB_Small.png" alt="" class="sidenav-brand-logo">
+            <!-- <li><a href="sass.html">Sass</a></li>
+					<li><a href="badges.html">Components</a></li>
+					<li><a href="collapsible.html">Javascript</a></li>
+					<li><a href="mobile.html">Mobile</a></li> -->
+        </ul>
+        <!-- The TabsNav element should not be in a final product, I kept it to speed up prototyping -->
+        <ul id="tabsNav" style="display:none;" class="tabs">
+            <li class="tab col s3"><a class="active" href="#tab-0">Test 0</a></li>
+            <li class="tab col s3"><a href="#tab-1">Test 1</a></li>
+            <li class="tab col s3"><a href="#tab-2">Test 2</a></li>
+            <li class="tab col s3"><a href="#tab-3">Test 3</a></li>
+            <li class="tab col s3"><a href="#tab-4">Test 4</a></li>
+            <li class="tab col s3"><a href="#tab-5">Test 5</a></li>
+            <li class="tab col s3"><a href="#tab-6">Test 6</a></li>
+        </ul>
+        <section id="loadingView" class="row centered">
+            <div class="row">
+                <div class="col s12 hide-on-small-only">
+                    <div class="scene">
+                        <div class="cow">
+                            <div class="head">
+                                <div class="ears">
+                                    <div class="ear">
+                                        <div></div>
+                                    </div>
+                                    <div class="ear">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="face">
+                                    <div class="shadow"></div>
+                                    <div class="eye"></div>
+                                    <div class="eye"></div>
+                                </div>
+                                <div class="nose">
+                                    <div class="nostril"></div>
+                                    <div class="nostril"></div>
+                                </div>
+                            </div>
+                            <div class="body">
+                                <div class="torso">
+                                    <div class="spot"></div>
+                                    <div class="spot"></div>
+                                </div>
+                                <div class="legs">
+                                    <div class="leg"></div>
+                                    <div class="leg"></div>
+                                    <div class="leg"></div>
+                                    <div class="leg"></div>
+                                    <div class="utters">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tail">
+                            </div>
+                        </div>
+                        <div class="barn">
+                            <div class="roof"></div>
+                            <div class="building">
+                                <div class="door"></div>
+                            </div>
+                        </div>
+                        <div class="ground">
+                            <div class="clumps">
+                                <div class="clump"></div>
+                                <div class="clump"></div>
+                                <div class="clump"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <h6 class="center-align">Getting everything ready for you.</h6>
+                    <div id="loadingBar" data-preset="rainbow" data-duration="5"
+                        style="width:50%;height:50%;margin:auto" class="ldBar label-center" data-value="0"></div>
+                </div>
+            </div>
+        </section>
+        <section id="initialView" class="row centered hide">
+            <article class="col s-12">
+                <h2>Introduktion</h2>
+                <p>Vores planet står over for en klimaudfordring som landbruget har en del af ansvaret for.
+                    <br>
+                    Som et af verdens største mejeriselskaber har vi en stor forpligtelse - og samtidig en stor mulighed
+                    - for at gøre noget ved det.
+                    <br>
+                    I Arla tager vi vores del af ansvaret, og reducerer vores CO2e udledning med 30%* inden 2030.
+                    <br>
+                    <br>
+                    Med dette værktøj hjælper vi dig med at få overblik over gårdenes fremskridt mod det endelige mål
+                    for at mindske vores klimaaftryk:
+                    <br>
+                    <small>* Siden 2015</small>
+                </p>
+                <h4>CO2e NEUTRAL MÆLK I 2050</h4>
+                <p>Du vil først blive bedt om at udfylde data fra din egen gård, hvorefter du vil have mulighed for at
+                    se hvordan dine data ser ud nu, og de forrige år*.
+                    Du vil også have mulighed for at sammenligne med andre regioner.
+                    <br>
+                    <small>* Hvis det er udfyldt.</small>
+                </p>
+                <div class="row">
+                    <div class="col s12 d-flex">
+                        <a id="goToLoginBtn" class="waves-effect waves-light btn-large btn mx-a grass-green"
+                            onclick="goToLogin();">
+                            Start her<i class="material-icons right">arrow_forward</i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section id="loginView" class="row" style="display: none;">
+            <div class="col s12 m10 l6 push-m1 push-l3">
+                <h2>Login</h2>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="email" value="test@user.dk" disabled class="validate valid">
+                        <label for="email">Email</label>
+                        <span class="helper-text" data-error="Must be a valid email"
+                            data-success="Email is valid"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" value="1234" type="password" disabled>
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 l6">
+                        <select id="selectRegion" onchange="updateFarmSelect();">
+                            <option value="" disabled selected>Vælg region</option>
+                            <option value="north">Nord</option>
+                            <option value="south">Syd</option>
+                            <option value="zealand">Sjælland</option>
+                        </select>
+                        <label>Vælg Region</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <select id="selectFarm" disabled onchange="updateLoginBtnsState();">
+                            <option value="" disabled selected>Vælg gård</option>
+                        </select>
+                        <label>Vælg Gård</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 d-flex">
+                        <a id="advancedLoginBtn" class="waves-effect waves-light btn mx-a forest-green" disabled
+                            onclick="showAdvancedView();">
+                            Jeg vil godt have hjælp<i class="material-icons right">arrow_forward</i>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 d-flex">
+                        <a id="simpleLoginBtn" class="waves-effect waves-light btn mx-a dawn-orange" disabled
+                            onclick="showSimpleView();">
+                            Jeg har gjort det her før<i class="material-icons right">arrow_forward</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="simpleJourneyView" style="display: none;" class="row">
+            <article class="col s12">
+                <div class="row">
+                    <div class="col s12">
+                        <h3>Flok & Køer</h3>
+                        <div class="row">
+                            <div class="input-field col s12 l6">
+                                <input id="herdAmountCows" type="number" step="1" class="validate">
+                                <label for="herdAmountCows">Antal køer</label>
+                                <span class="helper-text" data-error="Must be a whole number (eg: 1)">Antal køer, i
+                                    år</span>
+                            </div>
+                            <div class="input-field col s12 l6">
+                                <input id="herdMilkProduced" type="number" step="0.001" class="validate">
+                                <label for="herdMilkProduced">Mælk produceret</label>
+                                <span class="helper-text"
+                                    data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">kg. mælk
+                                    produceret, i år</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 l6">
+                                <input id="herdSelfSufficiency" type="number" step="0.001" min="0.001" max="100"
+                                    class="validate">
+                                <label for="herdSelfSufficiency">Selvforsyning med foder</label>
+                                <span class="helper-text"
+                                    data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">% af tørt
+                                    stof</span>
+                            </div>
+                            <div class="input-field col s12 l6">
+                                <input id="cowsFeedConsumption" type="number" class="validate">
+                                <label for="cowsFeedConsumption">Foderforbrug</label>
+                                <span class="helper-text" data-error="Must be a number">kg. af tørt stof, i år</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <h3>Energi</h3>
+                        <div class="row">
+                            <div class="input-field col s12 l6">
+                                <input id="energyDiesel" type="number" step="0.001" class="validate">
+                                <label for="energyDiesel">Diesel brugt på gården</label>
+                                <span class="helper-text"
+                                    data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">Liter diesel
+                                    brugt, i år</span>
+                            </div>
+                            <div class="input-field col s12 l6">
+                                <input id="energyElectricity" type="number" step="0.001" class="validate">
+                                <label for="energyElectricity">Energi brugt på gården</label>
+                                <span class="helper-text"
+                                    data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">kWh. energi
+                                    brugt, i år</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex">
+                    <a id="simpleSubmitBtn" class="waves-effect waves-light btn grass-green mx-a mt-15"
+                        onclick="submitSimple();">
+                        <i class="material-icons left">send</i><span>Send</span>
+                    </a>
+                </div>
+            </article>
+        </section>
+        <section id="advancedJourneyView" style="display: none;" class="row">
+            <article id="tab-0" class="col s12 question-container active">
+                <div class="centered">
+                    <h2>Velkommen!</h2>
+                    <p class="flow-text">
+                        Du vil undervejs få tips, og links til flere informationer.
+                        <br>
+                        Brug knapperne i bunden af skærmen til at navigere.
+                    </p>
+                </div>
+            </article>
+            <article id="tab-1" class="col s12 question-container">
+                <div class="row">
+                    <div class="col s12 m10 l6 push-m1 push-l3">
+                        <h2>Hyrde</h2>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="herdAmountCows" type="number" step="1" class="validate">
+                                <label for="herdAmountCows">Antal køer</label>
+                                <span class="helper-text" data-error="Must be a whole number (eg: 1)">Antal køer, i
+                                    år</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article id="tab-2" class="col s12 question-container">
+                <div class="row">
+                    <div class="col s12 m10 l6 push-m1 push-l3">
+                        <h2>Hyrde</h2>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="herdMilkProduced" type="number" step="0.001" class="validate">
+                                <label for="herdMilkProduced">Mælk produceret</label>
+                                <span class="helper-text"
+                                    data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">kg. mælk
+                                    produceret, i år</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article id="tab-3" class="col s12 question-container">
+                <div class="row">
+                    <div class="col s12 m10 l6 push-m1 push-l3">
+                        <h2>Hyrde</h2>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="herdSelfSufficiency" type="number" step="0.001" min="0.001" max="100"
+                                    class="validate">
+                                <label for="herdSelfSufficiency">Selvforsyning med foder</label>
+                                <span class="helper-text"
+                                    data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">% af tørt
+                                    stof</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article id="tab-4" class="col s12 question-container">
+                <div class="row">
+                    <div class="col s12 m10 l6 push-m1 push-l3">
+                        <h2>Hyrde</h2>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="cowsFeedConsumption" type="number" class="validate">
+                                <label for="cowsFeedConsumption">Foderforbrug</label>
+                                <span class="helper-text" data-error="Must be a number">kg. af tørt stof, i år</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article id="tab-5" class="col s12 question-container">
+                <div class="row">
+                    <div class="col s12 m10 l6 push-m1 push-l3">
+                        <h2>Energi</h2>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="energyDiesel" type="number" step="0.001" class="validate">
+                                <label for="energyDiesel">Diesel brugt på gården</label>
+                                <span class="helper-text"
+                                    data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">Liter diesel
+                                    brugt, i år</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article id="tab-6" class="col s12 question-container">
+                <div class="row">
+                    <div class="col s12 m10 l6 push-m1 push-l3">
+                        <h2>Energi</h2>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="energyElectricity" type="number" step="0.001" class="validate">
+                                <label for="energyElectricity">Energi brugt på gården</label>
+                                <span class="helper-text"
+                                    data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">kWh. energi
+                                    brugt, i år</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section id="resultsView" style="display: none;" class="row">
+            <div class="row m-0">
+                <div class="input-field col s12 m6 l4 offset-m3 offset-l4">
+                    <select id="resultYearsSelect" multiple>
+                        <option value="" disabled>Vælg år</option>
+                        <option selected value="2019">2019</option>
+                        <option selected value="2018">2018</option>
+                        <option selected value="2017">2017</option>
+                        <option selected value="2016">2016</option>
+                        <option selected value="2015">2015</option>
+                    </select>
+                    <label>År der vises i oversigterne</label>
+                </div>
+            </div>
+            <article id="resultsYourData" class="col s12">
+                <h2 class="mt-0">Din data</h2>
+                <div class="chart-container">
+                    <canvas id="cows-vs-co" class="graphCanvas"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="co-vs-kg-milk" class="graphCanvas"></canvas>
+                </div>
+            </article>
+            <article id="resultsRegionData" style="display: none;" class="col s12">
+                <h2 class="mt-0">Region data</h2>
+            </article>
+            <article id="resultsCompareData" style="display: none;" class="col s12">
+                <h2 class="mt-0">Sammenlign data</h2>
+            </article>
+        </section>
+    </main>
+
+    <footer id="footerNav" class="page-footer forest-green ld-bar-hack">
+        <div class="container">
+            <div id="footerNavBtns" class="row footer-row d-flex">
+                <a id="prevTabBtn" class="waves-effect waves-light btn prev-btn twilight-blue disabled"
+                    onclick="prevTab();">
+                    <i class="material-icons left">arrow_back</i><span>Forrige</span>
+                </a>
+                <div id="progressTracker" class="ldBar label-top" data-preset="bubble" data-fill-background="#0B43AA" data-pattern-size="32"
+                    data-fill="images/milk.svg" style="width:36px;height:36px">
+                </div>
+                <a id="nextTabBtn" class="waves-effect waves-light twilight-blue btn next-btn" onclick="nextTab();">
+                    <i class="material-icons right">arrow_forward</i><span>Hyrde</span>
+                </a>
+                <a id="advancedSubmitBtn" style="display: none;"
+                    class="waves-effect waves-light btn grass-green next-btn" onclick="submitAdvanced();">
+                    <i class="material-icons left">send</i><span>Send</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- I should really use Gulp to compile these together... -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="js/loading-bar.min.js"></script>
+    <script src="js/variables.js"></script>
+    <script src="js/prototypeData.js"></script>
+    <script>
+        //This emulates loading for the prototype
+        function initializeLoading() {
+            updateLoadingBar();
+            // after 5 seconds stop
+            setTimeout(() => {
+                $('#loadingView').slideUp('slow', function () {
+                    $('#initialView').removeClass('hide');
+                });
+            }, 5000);
+        }
+
+        function updateLoadingBar() {
+            loadingBarProgress = 100;
+            loadingBarEl.set(loadingBarProgress);
+
+            //Reset loadingBarProgress
+            loadingBarProgress = 0;
+        }
+
+        function updateProgress(currProgress) {
+            progressTrackerEl.set(currProgress);
+        }
+
+        function prevTab() {
+            currProgress -= progressStep;
+            currTabIndex--;
+            switchTab()
+        }
+
+        function nextTab() {
+            //TODO: Run validation for current tab
+            //If validation success:
+            currProgress += progressStep;
+            currTabIndex++;
+            switchTab();
+
+            //else highlight invalid elements
+        }
+
+        function updateBtnStates() {
+            //Prevent user from going to previous if at the start
+            if (currTabIndex >= 1) {
+                let prevTabEl = $('#tab-' + (currTabIndex - 1));
+                $('#prevTabBtn').removeClass('disabled');
+                $('#prevTabBtn span').text(prevTabEl.find('h2').text())
+            } else { //User can't go back
+                $('#prevTabBtn').addClass('disabled');
+                $('#prevTabBtn span').text('Forrige');
+            }
+
+            //Prevent user from going to next if at the end
+            if (currTabIndex === tabCount - 1) {
+                // $('#nextTabBtn').addClass('disabled');
+                // $('#nextTabBtn span').text('Next');
+                $('#nextTabBtn').hide();
+                $('#advancedSubmitBtn').show();
+            } else {
+                let nextTabEl = $('#tab-' + (currTabIndex + 1));
+                $('#nextTabBtn').removeClass('disabled');
+                $('#nextTabBtn span').text(nextTabEl.find('h2').text());
+                $('#nextTabBtn').show();
+                $('#advancedSubmitBtn').hide();
+            }
+        }
+
+        function switchTab() {
+            updateBtnStates();
+            updateProgress(currProgress);
+            tabId = 'tab-' + currTabIndex;
+            tabsInstance.select(tabId);
+            if ($('#' + tabId).find('input').length > 0) {
+                // console.log('Input found, setting focus');
+                $('#' + tabId).find('input:first').focus();
+            }
+
+
+        }
+
+        function setInputValidationClass(inputEl, valid = false) { //Defaults to invalid
+            if (valid) {
+                $(inputEl).removeClass('valid').addClass('invalid');
+            } else {
+                $(inputEl).removeClass('invalid').addClass('valid');
+            }
+        }
+
+        function updateFarmSelect() {
+            let regionSelect = $('#selectRegion');
+            let farmSelect = $('#selectFarm');
+
+            //Clear the select of previous options
+            farmSelect.find('option').not(':first').remove();
+
+            switch (regionSelect.val()) {
+                case "north":
+                    northFarms.forEach(element => {
+                        farmSelect.append(`<option value="${element}"> 
+                ${element}
+           </option>`);
+                    });
+                    break;
+                case "south":
+                    southFarms.forEach(element => {
+                        farmSelect.append(`<option value="${element}"> 
+                    ${element}
+               </option>`);
+                    });
+                    break;
+                case "zealand":
+                    zealandFarms.forEach(element => {
+                        farmSelect.append(`<option value="${element}"> 
+                    ${element}
+               </option>`);
+                    });
+                    break;
+                default:
+                    console.log("Farm selection broke");
+                    break;
+            }
+
+            farmSelect.removeAttr('disabled');
+            farmSelect.parent().removeClass('disabled');
+
+            //Set value to first option and reinitialize the select to update the view
+            farmSelect.val($("#target option:first").val());
+
+            farmSelect.formSelect();
+        }
+
+        function goToLogin() {
+            $('#initialView').fadeOut("fast", function () {
+                $('#loginView').fadeIn("fast");
+            });
+        }
+
+        function updateLoginBtnsState() {
+            $('#advancedLoginBtn').removeAttr('disabled');
+            $('#simpleLoginBtn').removeAttr('disabled');
+        }
+
+        function showAdvancedView() {
+            $('#loginView').fadeOut("slow", function () {
+                $('#advancedJourneyView').fadeIn("fast");
+                $('#footerNav').removeClass('ld-bar-hack');
+            });
+        }
+
+        function showSimpleView() {
+            $('#loginView').fadeOut("slow", function () {
+                $('#simpleJourneyView').fadeIn("fast");
+            });
+        }
+
+        function submitAdvanced() {
+            $('#advancedJourneyView').fadeOut("slow", function () {
+                $('#resultsView').fadeIn("fast");
+                $('#footerNav').addClass('ld-bar-hack');
+            });
+        }
+
+        function submitSimple() {
+            $('#simpleJourneyView').fadeOut("slow", function () {
+                $('#resultsView').fadeIn("fast");
+                ('#footerNav').addClass('ld-bar-hack');
+            });
+        }</script>
+    <!-- <script src="js/functions.js"></script> -->
+    <script src="js/chart-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -220,7 +220,7 @@ var co2VsKgMilk = {
 	data: {
 		labels: ['2015', '2016', '2017', '2018', '2019'],
 		datasets: [{
-			label: 'Kg mælk',
+			label: 'Kg CO₂',
 			backgroundColor: window.chartColors.orange,
 			borderColor: window.chartColors.orange,
 			data: [
