@@ -78,6 +78,25 @@ footer {
     /* width: 80vw */
 }
 
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.responsive-img{
+    max-width: 100%;
+    height: auto;
+}
 
 .question-container {
     height: 100%;
@@ -122,6 +141,10 @@ In browsers other than firefox, label alignment goes wrong, but firefox throws t
 
 .d-flex {
     display: flex;
+}
+
+.d-block{
+    display: block;
 }
 
 .mx-a {
@@ -211,6 +234,12 @@ In browsers other than firefox, label alignment goes wrong, but firefox throws t
 .select-dropdown.dropdown-content > li.selected > span > label > span {
     color: var(--white) !important;
 }
+
+.sidenav li > a{
+    border-top: 1px solid var(--forest-green);
+    border-bottom: 1px solid var(--forest-green);
+}
+
 /* #endregion MaterializeCSS overrides */
 
 /* #region MediaQueries */

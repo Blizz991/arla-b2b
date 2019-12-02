@@ -27,7 +27,8 @@
 				<h1 class="brand-name">Arla B2B</h1>
 			</div>
 			<a href="#" data-target="sideNav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-			<ul class="right hide-on-med-and-down">
+			<ul class="right hide-on-med-and-down ml-a">
+				<li><a href="https://www.arla.dk/om-arla/omtanke/" target="_blank">Lær mere</a></li>
 				<!-- <li><a href="sass.html">Sass</a></li>
 				<li><a href="badges.html">Components</a></li>
 				<li><a href="collapsible.html">Javascript</a></li>
@@ -38,6 +39,7 @@
 	<main class="container">
 		<ul class="sidenav" id="sideNav">
 			<img src="images/Arla_Logo_RGB_Small.png" alt="" class="sidenav-brand-logo">
+			<li><a href="https://www.arla.dk/om-arla/omtanke/" target="_blank">Lær mere om vores tiltag</a></li>
 			<!-- <li><a href="sass.html">Sass</a></li>
 					<li><a href="badges.html">Components</a></li>
 					<li><a href="collapsible.html">Javascript</a></li>
@@ -154,7 +156,7 @@
 					<div class="col s12 d-flex">
 						<a id="advancedLoginBtn" class="waves-effect waves-light btn mx-a forest-green" disabled
 							onclick="showAdvancedView();">
-							Jeg vil godt have hjælp<i class="material-icons right">arrow_forward</i>
+							Dette er første gang<i class="material-icons right">arrow_forward</i>
 						</a>
 					</div>
 				</div>
@@ -162,7 +164,7 @@
 					<div class="col s12 d-flex">
 						<a id="simpleLoginBtn" class="waves-effect waves-light btn mx-a dawn-orange" disabled
 							onclick="showSimpleView();">
-							Jeg har gjort det her før<i class="material-icons right">arrow_forward</i>
+							Jeg vil bare indtaste min data<i class="material-icons right">arrow_forward</i>
 						</a>
 					</div>
 				</div>
@@ -170,13 +172,7 @@
 		</section>
 		<section id="simpleJourneyView" style="display: none;" class="row">
 			<article class="col s12">
-				<h2>Introduktion</h2>
-				<p>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis veritatis ratione error enim
-					minus
-					quaerat, commodi mollitia odit quibusdam ea libero sint asperiores dignissimos maiores sit
-					aspernatur, dolorem nulla rerum.
-				</p>
+				<h2>Indtast dine data fra i år</h2>
 				<div class="row">
 					<div class="col s12">
 						<h3>Flok & Køer</h3>
@@ -243,10 +239,28 @@
 		</section>
 		<section id="advancedJourneyView" style="display: none;" class="row">
 			<article id="tab-0" class="col s12 question-container active">
-				<h2>Intro</h2>
-				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis veritatis ratione error enim minus
-					quaerat, commodi mollitia odit quibusdam ea libero sint asperiores dignissimos maiores sit
-					aspernatur, dolorem nulla rerum.</p>
+				<h2>Bæredygtighed</h2>
+				<p>Vores planet står over for en klimaudfordring som landbruget har en del af ansvaret for.
+					<br>
+					Som et af verdens største mejeriselskaber har vi en stor forpligtelse - og samtidig en stor mulighed
+					- for at gøre noget ved det.
+					<br>
+					I Arla tager vi vores del af ansvaret, og reducerer vores CO₂e udledning med 30%* inden 2030.
+					<br>
+					Vi og vores landmænd sætter ind hele vejen, fra vores køer til dit køleskab, hvor vi hver dag tager
+					nye skridt for at mindske vores klimaaftryk mod vores endelige mål:
+					<br>
+					<b>CO₂e NEUTRAL MÆLK I 2050</b></p>
+				<div class="row">
+					<div class="col s12 m6 push-m3 mt-15">
+						<div class="videoWrapper">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/xZGTUN7C72Q"
+								frameborder="0"
+								allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
 			</article>
 			<article id="tab-1" class="col s12 question-container">
 				<div class="row">
@@ -258,6 +272,17 @@
 								<label for="herdAmountCows">Antal køer</label>
 								<span class="helper-text" data-error="Must be a whole number (eg: 1)">Antal køer, i
 									år</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12">
+								<h5>Vidste du at...</h5>
+								<p>Landbruget står for op til 25% af den samlede udledning af drivhusgasser i Danmark
+								</p>
+								<img src="images/cows_on_grass.jpg" class="responsive-img" alt="Køer på græs">
+								<a class="center d-block"
+									href="https://www.arla.dk/artikler/pavirker-koerne-klimaet">Tryk her for at lære
+									mere om hvad du kan gøre</a>
 							</div>
 						</div>
 					</div>
@@ -274,6 +299,17 @@
 								<span class="helper-text"
 									data-error="Must be a number with a maximum of 3 decimals (eg: 12.123)">kg. mælk
 									produceret, i år</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12">
+								<h5>De 6 primære indsatsgrupper</h5>
+								</p>
+								<img src="images/landmaendendes_indsatsomraader.png" class="responsive-img"
+									alt="Indsatsområder">
+								<a class="center d-block"
+									href="https://www.arla.dk/artikler/pavirker-koerne-klimaet">Tryk her for at lære
+									mere om hvad du kan gøre</a>
 							</div>
 						</div>
 					</div>
@@ -293,6 +329,22 @@
 									stof</span>
 							</div>
 						</div>
+						<div class="row">
+							<div class="col s12">
+								<h5>Vidste du at...</h5>
+								<p>At være selvforsynende er noget af det vigtigste for at skabe bæredygtighed på
+									gården. <br>
+									<a target="_blank"
+										href="https://landbrugsavisen.dk/kv%C3%A6g/godt-%C3%B8konomi-og-klima-m%C3%A6lkeproducent-er-80-procent-selvforsynende-med-foder">Holger
+										Hedelund Poulsen</a>
+									er nu 80% selvforsynende med foder - og er derved blandt Danmarks forreste når det
+									kommer til bæredygtighed.
+								</p>
+								<img class="responsive-img" src="images/co2_neutral.PNG" alt="CO2 Neutral 2050">
+								<!-- <a class="center d-block" href="https://www.arla.dk/artikler/pavirker-koerne-klimaet">Tryk her for at lære
+										mere om hvad du kan gøre</a> -->
+							</div>
+						</div>
 					</div>
 				</div>
 			</article>
@@ -305,6 +357,18 @@
 								<input id="cowsFeedConsumption" type="number" class="validate">
 								<label for="cowsFeedConsumption">Foderforbrug</label>
 								<span class="helper-text" data-error="Must be a number">kg. af tørt stof, i år</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12">
+								<h5>Vidste du at...</h5>
+								<p>Vi også gøre vores for at hjælpe miljøet?
+									<br> vi har blandt andet skiftet til at bruge 100% genbrugsplast til vores
+									mælkekasser.
+									<br>
+									Dette har gjort de også har skiftet til sort, men miljøet er vigtigere!
+								</p>
+								<img class="responsive-img" src="images/sorte_malkekasser.jpg" alt="CO2 Neutral 2050">
 							</div>
 						</div>
 					</div>
@@ -340,6 +404,12 @@
 							</div>
 						</div>
 					</div>
+					<div class="row">
+							<div class="col s12">
+								<h5>Fokus på grøn energi</h5>
+								<img class="responsive-img" src="images/windmill.jpg" alt="CO2 Neutral 2050">
+							</div>
+						</div>
 				</div>
 			</article>
 		</section>
