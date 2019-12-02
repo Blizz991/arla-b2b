@@ -1,23 +1,15 @@
 //This emulates loading for the prototype
 function initializeLoading() {
-    // repeat with the interval of 0.5 seconds
-    // let timerId = setInterval(() =>
-    //     updateLoadingBar(),
-    //     1000);
-
     updateLoadingBar();
     // after 5 seconds stop
     setTimeout(() => {
-        // clearInterval(timerId);
-        $('#initialView').slideUp('slow', function () {
-            $('#loginView').removeClass('hide');
+        $('#loadingView').slideUp('slow', function () {
+            $('#initialView').removeClass('hide');
         });
-    // }, 5000);
-    }, 500);
+    }, 5000);
 }
 
 function updateLoadingBar() {
-    // loadingBarProgress += 20;
     loadingBarProgress = 100;
     loadingBarEl.set(loadingBarProgress);
 
@@ -58,8 +50,6 @@ function updateBtnStates() {
 
     //Prevent user from going to next if at the end
     if (currTabIndex === tabCount - 1) {
-        // $('#nextTabBtn').addClass('disabled');
-        // $('#nextTabBtn span').text('Next');
         $('#nextTabBtn').hide();
         $('#advancedSubmitBtn').show();
     } else {
@@ -103,22 +93,22 @@ function updateFarmSelect() {
         case "north":
             northFarms.forEach(element => {
                 farmSelect.append(`<option value="${element}"> 
-                ${element}
-           </option>`);
+        ${element}
+   </option>`);
             });
             break;
         case "south":
             southFarms.forEach(element => {
                 farmSelect.append(`<option value="${element}"> 
-                    ${element}
-               </option>`);
+            ${element}
+       </option>`);
             });
             break;
         case "zealand":
             zealandFarms.forEach(element => {
                 farmSelect.append(`<option value="${element}"> 
-                    ${element}
-               </option>`);
+            ${element}
+       </option>`);
             });
             break;
         default:
@@ -135,7 +125,13 @@ function updateFarmSelect() {
     farmSelect.formSelect();
 }
 
-function updateLoginBtnsState(){
+function goToLogin() {
+    $('#initialView').fadeOut("fast", function () {
+        $('#loginView').fadeIn("fast");
+    });
+}
+
+function updateLoginBtnsState() {
     $('#advancedLoginBtn').removeAttr('disabled');
     $('#simpleLoginBtn').removeAttr('disabled');
 }
